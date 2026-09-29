@@ -1,4 +1,8 @@
-.git/
-.wrangler/
+.git
+.git/**
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
 wrangler.jsonc
-node_modules/
+.assetsignore
