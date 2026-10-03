@@ -17,6 +17,7 @@ const DIST = join(ROOT, "dist");
 // Files and directories that make up the website.
 const REQUIRED = [
   "index.html",
+  "404.html",
   "halloween",
   "guides",
   "ueber-uns",
