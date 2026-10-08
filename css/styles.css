@@ -879,3 +879,17 @@ ul.quick-overview li::marker {
   }
 
 }
+
+.guide-article ul:not(.checklist):not(.point-list):not(.quick-overview) {
+  list-style: disc;
+  margin: var(--space-2) 0 0;
+  padding-left: 1.2rem;
+}
+
+.guide-article ul:not(.checklist):not(.point-list):not(.quick-overview) li {
+  padding: 0.25rem 0;
+}
+
+.guide-article ul:not(.checklist):not(.point-list):not(.quick-overview) li::marker {
+  color: var(--color-accent);
+}
