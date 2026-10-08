@@ -653,3 +653,204 @@ p { margin: 0 0 var(--space-2); max-width: 62ch; color: var(--color-ink-soft); }
 
 /* Reset default browser italic on <address> to match body-text style */
 address { font-style: normal; }
+
+/* =========================================================
+   SaisonKompass — Frontend Audit Fixes
+   Navigation + Cards + Lists + Hero Compatibility
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Mobile navigation
+   --------------------------------------------------------- */
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 42px;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  background: var(--color-bg-alt);
+}
+
+.nav-toggle:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.nav-toggle__icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 18px;
+}
+
+.nav-toggle__icon span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: currentColor;
+}
+
+.site-nav {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-line);
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.7rem 0;
+}
+
+.site-nav a:hover {
+  color: var(--color-accent);
+}
+
+.site-header.is-open .site-nav {
+  display: flex;
+}
+
+
+/* ---------------------------------------------------------
+   Desktop navigation
+   --------------------------------------------------------- */
+
+@media (min-width: 800px) {
+
+  .site-header__inner {
+    flex-wrap: nowrap;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-3);
+    padding-top: 0;
+    border-top: none;
+    margin-left: auto;
+  }
+
+  .site-nav a {
+    padding: 0.25rem 0;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   Direct .intent-card links
+   Supports current Guide HTML without restructuring it.
+   --------------------------------------------------------- */
+
+a.intent-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  height: 100%;
+  padding: var(--space-3);
+  background: var(--color-card-bg);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+a.intent-card:hover {
+  background: var(--color-bg-alt);
+}
+
+a.intent-card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+
+/* ---------------------------------------------------------
+   Lists
+   The global ul reset removes markers.
+   Restore markers for editorial point lists.
+   --------------------------------------------------------- */
+
+ul.point-list,
+ul.quick-overview {
+  margin: var(--space-2) 0 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+ul.point-list li,
+ul.quick-overview li {
+  padding: 0.25rem 0;
+}
+
+ul.point-list li::marker,
+ul.quick-overview li::marker {
+  color: var(--color-accent);
+}
+
+
+/* ---------------------------------------------------------
+   Hero compatibility
+   Guide 1 currently uses .hero__intro while the newer
+   guides use .hero__sub.
+   --------------------------------------------------------- */
+
+.hero__intro,
+.hero__sub {
+  font-size: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ---------------------------------------------------------
+   Mobile spacing refinement
+   --------------------------------------------------------- */
+
+@media (max-width: 799px) {
+
+  .site-header__inner {
+    min-height: 64px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand__word {
+    white-space: nowrap;
+  }
+
+  .site-nav {
+    order: 3;
+  }
+
+}
