@@ -843,10 +843,22 @@ ul.quick-overview li::marker {
 
   .brand {
     min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.05rem;
   }
 
   .brand__word {
     white-space: nowrap;
+  }
+
+  .brand__tagline {
+    font-size: 0.8rem;
+    line-height: 1.25;
+  }
+
+  .nav-toggle {
+    flex: 0 0 auto;
   }
 
   .site-nav {
