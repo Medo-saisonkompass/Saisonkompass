@@ -924,3 +924,14 @@ ul.quick-overview li::marker {
     gap: 0.5rem;
   }
 }
+
+/* Halloween content cards — single-column layout */
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.content-card {
+  min-width: 0;
+}
