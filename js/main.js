@@ -48,8 +48,11 @@
     }
   }
 
+  
   // Footer year
-  var yearEl = document.getElementById("year");
+  var yearEl =
+    document.getElementById("currentYear") ||
+    document.getElementById("year");
 
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
