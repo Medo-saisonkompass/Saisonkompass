@@ -5,7 +5,9 @@
   var header = document.querySelector(".site-header");
   var toggle = document.getElementById("navToggle");
   var toggleLabel = document.getElementById("navToggleLabel");
-  var nav = document.getElementById("siteNav");
+  var nav =
+  document.getElementById("siteNav") ||
+  document.getElementById("primaryNav");
 
   function setNavOpen(isOpen) {
     if (!header || !toggle) {
