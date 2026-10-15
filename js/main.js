@@ -41,8 +41,8 @@
 
     if (nav) {
       nav.addEventListener("click", function (event) {
-        if (event.target.tagName === "A") {
-          setNavOpen(false);
+        if (event.target.closest("a")) {
+  setNavOpen(false);
         }
       });
     }
