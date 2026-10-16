@@ -943,3 +943,26 @@ ul.quick-overview li::marker {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+
+/* Homepage hero image */
+.hero__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (min-width: 900px) {
+  .hero__graphic {
+    flex: 0 1 42%;
+    max-width: 420px;
+  }
+
+  .hero__text {
+    flex: 1 1 58%;
+    min-width: 0;
+  }
+}
