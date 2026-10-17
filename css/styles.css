@@ -1024,3 +1024,61 @@ ul.quick-overview li::marker {
   background: var(--color-accent);
   pointer-events: none;
 }
+
+/* ==========================================================================
+   SaisonKompass — Interaction polish
+   Consistent transitions and accessible motion preferences
+   ========================================================================== */
+
+.site-nav a,
+.footer-nav a,
+.site-footer nav a,
+.category-item a,
+.guide-row a,
+.link,
+a.intent-card,
+.intent-card a,
+.button,
+.nav-toggle {
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   SaisonKompass — Image consistency
+   ========================================================================== */
+
+.hero__image,
+.guide-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.guide-image figcaption {
+  max-width: 62ch;
+  margin-top: 0.65rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .hero__image,
+  .guide-image img {
+    border-radius: 0.4rem;
+  }
+}
