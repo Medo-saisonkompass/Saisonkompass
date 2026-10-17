@@ -966,3 +966,38 @@ ul.quick-overview li::marker {
     min-width: 0;
   }
 }
+
+
+/* Guide images: Halloween decoration */
+.guide-image {
+  margin: 1.75rem 0 2rem;
+  width: 100%;
+}
+
+.guide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.guide-image figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted, #6b625a);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.guide-image--hero {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .guide-image {
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .guide-image figcaption {
+    font-size: 0.85rem;
+  }
+}
