@@ -606,26 +606,47 @@ p { margin: 0 0 var(--space-2); max-width: 62ch; color: var(--color-ink-soft); }
 .point-list li { padding: 0.25rem 0; }
 .point-list li::marker { color: var(--color-accent); }
 
-/* Visual (non-interactive) checklist */
-.checklist { margin-top: var(--space-3); }
-.checklist li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--color-line);
-}
-.checklist li:last-child { border-bottom: none; }
-.checklist li::before {
-  content: "";
-  flex: 0 0 auto;
-  width: 1rem;
-  height: 1rem;
-  margin-top: 0.2rem;
-  border: 1.5px solid var(--color-ink-soft);
-  border-radius: 2px;
+/* Interactive checklist */
+.checklist {
+  margin-top: var(--space-3);
 }
 
+.checklist li {
+  display: block;
+  padding: 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.checklist input[type="checkbox"] {
+  flex: 0 0 1.15rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0.3rem 0 0;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.checklist label:has(input:checked) {
+  color: var(--color-ink-soft);
+}
+
+.checklist input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
 /* Spacing between an article's stacked topic subsections */
 .guide-article > section {
   margin-top: var(--space-4);
