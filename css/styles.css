@@ -1103,3 +1103,54 @@ a.intent-card,
     border-radius: 0.4rem;
   }
 }
+
+/* ==========================================================================
+   SaisonKompass — Social links in footer
+   ========================================================================== */
+
+.site-footer__social {
+  margin: var(--space-1) 0;
+}
+
+.site-footer__social-title {
+  margin-bottom: 0.4rem;
+  font-size: 1.45rem;
+}
+
+.site-footer__social-text {
+  margin-bottom: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 0.15rem;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-links a {
+    transition: none;
+  }
+}
