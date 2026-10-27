@@ -36,41 +36,47 @@
 .season-faq details { border-bottom:1px solid var(--color-line); padding:1rem 0; }
 .season-faq summary { cursor:pointer; font-weight:600; color:var(--color-ink); }
 .season-faq details p { margin-top:.75rem; }
-.guide-layout { display:grid; grid-template-columns:minmax(190px,.3fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:start; }
-.guide-sidebar { position:sticky; top:1rem; padding:1.25rem; background:var(--color-card-bg); border:1px solid var(--color-line); }
-.guide-sidebar ol { padding-left:1.2rem; list-style:decimal; }
-.guide-sidebar li { padding:.3rem 0; }
-.guide-sidebar a:hover { color:var(--color-accent); }
-.guide-sidebar .print-button { margin-top:1rem; width:100%; }
-.guide-article { min-width:0; }
-.guide-article > section { margin-top:var(--space-4); padding-top:var(--space-4); border-top:1px solid var(--color-line); }
-.guide-article > section:first-child { margin-top:0; padding-top:0; border-top:0; }
-.guide-note { padding:1rem 1.25rem; border-left:3px solid var(--color-accent); background:var(--color-bg-alt); }
-.timeline { margin:1.5rem 0; }
-.timeline-item { display:grid; grid-template-columns:7rem 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--color-line); }
-.timeline-kicker { color:var(--color-accent); font-size:.85rem; font-weight:600; }
-.timeline-marker { display:none; }
-.step-list { padding-left:1.3rem; list-style:decimal; }
-.step-list li { padding:.35rem 0; }
-.budget-board { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; margin:1.5rem 0; }
-.budget-board > * { min-width:0; padding:1rem; border:1px solid var(--color-line); background:var(--color-card-bg); }
-.checklist-group { margin-top:1.5rem; }
-.print-only { display:none; }
+.page-weihnachten-guide .guide-layout { display:grid; grid-template-columns:minmax(190px,.3fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:start; }
+.page-weihnachten-guide .guide-sidebar { position:sticky; top:1rem; padding:1.25rem; background:var(--color-card-bg); border:1px solid var(--color-line); }
+.page-weihnachten-guide .guide-sidebar ol { padding-left:1.2rem; list-style:decimal; }
+.page-weihnachten-guide .guide-sidebar li { padding:.3rem 0; }
+.page-weihnachten-guide .guide-sidebar a:hover { color:var(--color-accent); }
+.page-weihnachten-guide .guide-sidebar .print-button { margin-top:1rem; width:100%; }
+.page-weihnachten-guide .guide-article { min-width:0; }
+.page-weihnachten-guide .guide-article > section { margin-top:var(--space-4); padding-top:var(--space-4); border-top:1px solid var(--color-line); }
+.page-weihnachten-guide .guide-article > section:first-child { margin-top:0; padding-top:0; border-top:0; }
+.page-weihnachten-guide .guide-note { padding:1rem 1.25rem; border-left:3px solid var(--color-accent); background:var(--color-bg-alt); }
+.page-weihnachten-guide .timeline { margin:1.5rem 0; }
+.page-weihnachten-guide .timeline-item { display:grid; grid-template-columns:7rem 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--color-line); }
+.page-weihnachten-guide .timeline-kicker { color:var(--color-accent); font-size:.85rem; font-weight:600; }
+.page-weihnachten-guide .timeline-marker { display:none; }
+.page-weihnachten-guide .step-list { padding-left:1.3rem; list-style:decimal; }
+.page-weihnachten-guide .step-list li { padding:.35rem 0; }
+.page-weihnachten-guide .budget-board { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; margin:1.5rem 0; }
+.page-weihnachten-guide .budget-board > * { min-width:0; padding:1rem; border:1px solid var(--color-line); background:var(--color-card-bg); }
+.page-weihnachten-guide .checklist-group { margin-top:1.5rem; }
+.page-weihnachten-guide .print-only { display:none; }
 @media (max-width:760px) {
- .season-hero__inner,.season-principles,.guide-layout { grid-template-columns:1fr; }
+ .season-hero__inner,.season-principles,.page-weihnachten-guide .guide-layout { grid-template-columns:1fr; }
  .season-hero__art { min-height:260px; }
  .season-topic-grid { grid-template-columns:1fr; }
  .season-band__inner { align-items:flex-start; flex-direction:column; }
- .guide-sidebar { position:static; }
- .budget-board { grid-template-columns:1fr; }
- .timeline-item { grid-template-columns:1fr; gap:.25rem; }
+ .page-weihnachten-guide .page-weihnachten-guide .guide-sidebar { position:static; }
+ .page-weihnachten-guide .page-weihnachten-guide .budget-board { grid-template-columns:1fr; }
+ .page-weihnachten-guide .page-weihnachten-guide .timeline-item { grid-template-columns:1fr; gap:.25rem; }
 }
 @media print {
- body * { visibility:hidden !important; }
- .print-checklist,.print-checklist * { visibility:visible !important; }
- .print-checklist { position:absolute; inset:0 auto auto 0; width:100%; padding:0; margin:0; border:0; }
- .print-checklist input { appearance:none; width:12px; height:12px; border:1px solid #333; margin-right:.5rem; }
- .print-only { display:block; margin-top:1rem; }
- .site-header,.site-footer,.guide-sidebar,.hero,.breadcrumb-nav,.section:not(:has(.print-checklist)) { display:none !important; }
+  body.page-weihnachten-guide * { visibility: hidden !important; }
+  .page-weihnachten-guide .print-checklist,
+  .page-weihnachten-guide .print-checklist * { visibility: visible !important; }
+  .page-weihnachten-guide .print-checklist { position: absolute; inset: 0 auto auto 0; width: 100%; padding: 0; margin: 0; border: 0; }
+  .page-weihnachten-guide .print-checklist input { appearance: none; width: 12px; height: 12px; border: 1px solid #333; margin-right: .5rem; }
+  .page-weihnachten-guide .print-only { display: block; margin-top: 1rem; }
+  .page-weihnachten-guide .site-header,
+  .page-weihnachten-guide .site-footer,
+  .page-weihnachten-guide .guide-sidebar,
+  .page-weihnachten-guide .hero,
+  .page-weihnachten-guide .breadcrumb-nav,
+  .page-weihnachten-guide .section:not(:has(.print-checklist)) { display: none !important; }
 }
 @media (prefers-reduced-motion:reduce) { .season-topic { transition:none; } .season-topic:hover { transform:none; } }
