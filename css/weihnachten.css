@@ -1,0 +1,76 @@
+/* SaisonKompass — Weihnachten only. Loaded only by Weihnachten pages. */
+.season-hero { position: relative; overflow: hidden; padding: clamp(3rem, 7vw, 6rem) 0; background: #e7dcc3; }
+.season-hero__inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr); align-items: center; gap: clamp(2rem, 5vw, 4rem); }
+.season-hero__copy { max-width: 680px; }
+.season-hero h1 { max-width: 13ch; }
+.season-hero__lead { font-size: clamp(1.05rem, 1.8vw, 1.25rem); max-width: 58ch; }
+.season-hero__note { font-size: .9rem; margin-top: 1rem; }
+.season-hero__art { min-height: 330px; position: relative; overflow: hidden; background: #263b35; border-radius: 4px; }
+.winter-sun { position:absolute; width:140px; height:140px; border-radius:50%; background:#c1531b; top:16%; right:18%; opacity:.95; }
+.winter-tree { position:absolute; bottom:-4%; width:0; height:0; border-left:130px solid transparent; border-right:130px solid transparent; border-bottom:290px solid #496057; }
+.winter-tree--back { left:4%; transform:scale(.78); transform-origin:bottom; opacity:.75; }
+.winter-tree--front { right:0; border-bottom-color:#172e29; }
+.winter-star { position:absolute; color:#f1ead9; font-size:2rem; }
+.winter-star--one { top:12%; left:18%; }
+.winter-star--two { top:34%; right:12%; }
+.winter-orbit { position:absolute; width:240px; height:240px; border:1px solid rgba(241,234,217,.45); border-radius:50%; top:10%; left:20%; }
+.winter-art-label { position:absolute; left:1.25rem; bottom:1.25rem; color:#f1ead9; font:500 1.1rem/1.25 'Newsreader', Georgia, serif; letter-spacing:.02em; }
+.season-topic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
+.season-topic { display:flex; flex-direction:column; align-items:flex-start; min-height:230px; padding:1.5rem; border:1px solid var(--color-line); background:var(--color-card-bg); transition:transform .18s ease,border-color .18s ease; }
+.season-topic:hover { transform:translateY(-2px); border-color:var(--color-accent); }
+.season-topic--featured { background:#263b35; color:#f1ead9; }
+.season-topic--featured h3,.season-topic--featured p { color:#f1ead9; }
+.season-topic__number { font-size:.75rem; letter-spacing:.1em; font-weight:600; }
+.season-topic__symbol { align-self:flex-end; font-size:1.5rem; }
+.season-topic h3 { margin-top:.75rem; }
+.season-topic p { margin-bottom:1rem; }
+.season-topic__link { margin-top:auto; font-weight:600; border-bottom:1px solid currentColor; padding-bottom:.15rem; }
+.season-band { background:#263b35; color:#f1ead9; padding:clamp(2.5rem,5vw,4rem) 0; }
+.season-band h2,.season-band p { color:#f1ead9; }
+.season-band__inner { display:flex; align-items:center; justify-content:space-between; gap:2rem; }
+.eyebrow--inverted { color:#e7dcc3; }
+.season-principles { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); }
+.season-principle-list { list-style:none; padding:0; margin:0; }
+.season-principle-list li { display:grid; grid-template-columns:2.5rem 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--color-line); }
+.season-principle-list li>span { color:var(--color-accent); font-weight:600; }
+.season-faq details { border-bottom:1px solid var(--color-line); padding:1rem 0; }
+.season-faq summary { cursor:pointer; font-weight:600; color:var(--color-ink); }
+.season-faq details p { margin-top:.75rem; }
+.guide-layout { display:grid; grid-template-columns:minmax(190px,.3fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:start; }
+.guide-sidebar { position:sticky; top:1rem; padding:1.25rem; background:var(--color-card-bg); border:1px solid var(--color-line); }
+.guide-sidebar ol { padding-left:1.2rem; list-style:decimal; }
+.guide-sidebar li { padding:.3rem 0; }
+.guide-sidebar a:hover { color:var(--color-accent); }
+.guide-sidebar .print-button { margin-top:1rem; width:100%; }
+.guide-article { min-width:0; }
+.guide-article > section { margin-top:var(--space-4); padding-top:var(--space-4); border-top:1px solid var(--color-line); }
+.guide-article > section:first-child { margin-top:0; padding-top:0; border-top:0; }
+.guide-note { padding:1rem 1.25rem; border-left:3px solid var(--color-accent); background:var(--color-bg-alt); }
+.timeline { margin:1.5rem 0; }
+.timeline-item { display:grid; grid-template-columns:7rem 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--color-line); }
+.timeline-kicker { color:var(--color-accent); font-size:.85rem; font-weight:600; }
+.timeline-marker { display:none; }
+.step-list { padding-left:1.3rem; list-style:decimal; }
+.step-list li { padding:.35rem 0; }
+.budget-board { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; margin:1.5rem 0; }
+.budget-board > * { min-width:0; padding:1rem; border:1px solid var(--color-line); background:var(--color-card-bg); }
+.checklist-group { margin-top:1.5rem; }
+.print-only { display:none; }
+@media (max-width:760px) {
+ .season-hero__inner,.season-principles,.guide-layout { grid-template-columns:1fr; }
+ .season-hero__art { min-height:260px; }
+ .season-topic-grid { grid-template-columns:1fr; }
+ .season-band__inner { align-items:flex-start; flex-direction:column; }
+ .guide-sidebar { position:static; }
+ .budget-board { grid-template-columns:1fr; }
+ .timeline-item { grid-template-columns:1fr; gap:.25rem; }
+}
+@media print {
+ body * { visibility:hidden !important; }
+ .print-checklist,.print-checklist * { visibility:visible !important; }
+ .print-checklist { position:absolute; inset:0 auto auto 0; width:100%; padding:0; margin:0; border:0; }
+ .print-checklist input { appearance:none; width:12px; height:12px; border:1px solid #333; margin-right:.5rem; }
+ .print-only { display:block; margin-top:1rem; }
+ .site-header,.site-footer,.guide-sidebar,.hero,.breadcrumb-nav,.section:not(:has(.print-checklist)) { display:none !important; }
+}
+@media (prefers-reduced-motion:reduce) { .season-topic { transition:none; } .season-topic:hover { transform:none; } }
