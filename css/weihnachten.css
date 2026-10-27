@@ -794,3 +794,41 @@ body.page-weihnachten-guide .print-only {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* =========================================================
+   FIX: Weihnachten timeline text column
+   The timeline marker is hidden, so no marker column is needed.
+   ========================================================= */
+
+body.page-weihnachten-guide .timeline-item {
+  display: block !important;
+  width: 100%;
+  min-width: 0;
+}
+
+body.page-weihnachten-guide .timeline-item > div {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+body.page-weihnachten-guide .timeline-item h3,
+body.page-weihnachten-guide .timeline-item p,
+body.page-weihnachten-guide .timeline-item ul,
+body.page-weihnachten-guide .timeline-item li {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+body.page-weihnachten-guide .timeline-item ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+body.page-weihnachten-guide .timeline-item li {
+  padding: 0.25rem 0;
+}
