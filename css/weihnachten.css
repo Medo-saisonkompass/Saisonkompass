@@ -697,3 +697,38 @@ body.page-weihnachten-guide .print-only {
     transform: none;
   }
 }
+/* =========================================================
+   WIDE-VIEWPORT MOBILE / DESKTOP-MODE FIX
+   ========================================================= */
+
+@media screen and (max-width: 1100px) {
+  body.page-weihnachten-guide .guide-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  body.page-weihnachten-guide .guide-article {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  body.page-weihnachten-guide .guide-article h1,
+  body.page-weihnachten-guide .guide-article h2,
+  body.page-weihnachten-guide .guide-article h3,
+  body.page-weihnachten-guide .guide-article p,
+  body.page-weihnachten-guide .guide-article li {
+    hyphens: manual;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
