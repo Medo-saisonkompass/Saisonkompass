@@ -697,3 +697,100 @@ body.page-weihnachten-guide .print-only {
     transform: none;
   }
 }
+/* =========================================================
+   Weihnachten Guide — Desktop layout correction
+   Keeps the shared SaisonKompass styles unchanged.
+   ========================================================= */
+
+@media (min-width: 761px) {
+  body.page-weihnachten-guide main > .section > .wrap.guide-layout {
+    display: grid !important;
+    grid-template-columns: 250px minmax(0, 1fr) !important;
+    gap: 2.5rem;
+    align-items: start;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar {
+    position: sticky;
+    top: 1rem;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  body.page-weihnachten-guide .guide-article {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  body.page-weihnachten-guide .guide-article > section {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+  }
+
+  body.page-weihnachten-guide .guide-article h2,
+  body.page-weihnachten-guide .guide-article h3 {
+    max-width: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  body.page-weihnachten-guide .guide-article p,
+  body.page-weihnachten-guide .guide-article li {
+    max-width: none;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  body.page-weihnachten-guide .timeline-item {
+    display: grid;
+    grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  body.page-weihnachten-guide .timeline-item > div {
+    min-width: 0;
+  }
+
+  body.page-weihnachten-guide .budget-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Tablet and mobile: stack the guide navigation above the article. */
+@media (max-width: 760px) {
+  body.page-weihnachten-guide main > .section > .wrap.guide-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar {
+    position: static;
+    width: 100%;
+    max-width: none;
+  }
+
+  body.page-weihnachten-guide .guide-article {
+    width: 100%;
+    min-width: 0;
+  }
+
+  body.page-weihnachten-guide .timeline-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+
+  body.page-weihnachten-guide .budget-board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
