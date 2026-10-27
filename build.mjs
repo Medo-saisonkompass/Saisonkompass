@@ -19,6 +19,7 @@ const REQUIRED = [
   "index.html",
   "404.html",
   "halloween",
+  "weihnachten",
   "guides",
   "ueber-uns",
   "affiliate-hinweis",
