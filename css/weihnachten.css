@@ -1,82 +1,699 @@
-/* SaisonKompass — Weihnachten only. Loaded only by Weihnachten pages. */
-.season-hero { position: relative; overflow: hidden; padding: clamp(3rem, 7vw, 6rem) 0; background: #e7dcc3; }
-.season-hero__inner { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr); align-items: center; gap: clamp(2rem, 5vw, 4rem); }
-.season-hero__copy { max-width: 680px; }
-.season-hero h1 { max-width: 13ch; }
-.season-hero__lead { font-size: clamp(1.05rem, 1.8vw, 1.25rem); max-width: 58ch; }
-.season-hero__note { font-size: .9rem; margin-top: 1rem; }
-.season-hero__art { min-height: 330px; position: relative; overflow: hidden; background: #263b35; border-radius: 4px; }
-.winter-sun { position:absolute; width:140px; height:140px; border-radius:50%; background:#c1531b; top:16%; right:18%; opacity:.95; }
-.winter-tree { position:absolute; bottom:-4%; width:0; height:0; border-left:130px solid transparent; border-right:130px solid transparent; border-bottom:290px solid #496057; }
-.winter-tree--back { left:4%; transform:scale(.78); transform-origin:bottom; opacity:.75; }
-.winter-tree--front { right:0; border-bottom-color:#172e29; }
-.winter-star { position:absolute; color:#f1ead9; font-size:2rem; }
-.winter-star--one { top:12%; left:18%; }
-.winter-star--two { top:34%; right:12%; }
-.winter-orbit { position:absolute; width:240px; height:240px; border:1px solid rgba(241,234,217,.45); border-radius:50%; top:10%; left:20%; }
-.winter-art-label { position:absolute; left:1.25rem; bottom:1.25rem; color:#f1ead9; font:500 1.1rem/1.25 'Newsreader', Georgia, serif; letter-spacing:.02em; }
-.season-topic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; margin-top:2rem; }
-.season-topic { display:flex; flex-direction:column; align-items:flex-start; min-height:230px; padding:1.5rem; border:1px solid var(--color-line); background:var(--color-card-bg); transition:transform .18s ease,border-color .18s ease; }
-.season-topic:hover { transform:translateY(-2px); border-color:var(--color-accent); }
-.season-topic--featured { background:#263b35; color:#f1ead9; }
-.season-topic--featured h3,.season-topic--featured p { color:#f1ead9; }
-.season-topic__number { font-size:.75rem; letter-spacing:.1em; font-weight:600; }
-.season-topic__symbol { align-self:flex-end; font-size:1.5rem; }
-.season-topic h3 { margin-top:.75rem; }
-.season-topic p { margin-bottom:1rem; }
-.season-topic__link { margin-top:auto; font-weight:600; border-bottom:1px solid currentColor; padding-bottom:.15rem; }
-.season-band { background:#263b35; color:#f1ead9; padding:clamp(2.5rem,5vw,4rem) 0; }
-.season-band h2,.season-band p { color:#f1ead9; }
-.season-band__inner { display:flex; align-items:center; justify-content:space-between; gap:2rem; }
-.eyebrow--inverted { color:#e7dcc3; }
-.season-principles { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); }
-.season-principle-list { list-style:none; padding:0; margin:0; }
-.season-principle-list li { display:grid; grid-template-columns:2.5rem 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--color-line); }
-.season-principle-list li>span { color:var(--color-accent); font-weight:600; }
-.season-faq details { border-bottom:1px solid var(--color-line); padding:1rem 0; }
-.season-faq summary { cursor:pointer; font-weight:600; color:var(--color-ink); }
-.season-faq details p { margin-top:.75rem; }
-.page-weihnachten-guide .guide-layout { display:grid; grid-template-columns:minmax(190px,.3fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:start; }
-.page-weihnachten-guide .guide-sidebar { position:sticky; top:1rem; padding:1.25rem; background:var(--color-card-bg); border:1px solid var(--color-line); }
-.page-weihnachten-guide .guide-sidebar ol { padding-left:1.2rem; list-style:decimal; }
-.page-weihnachten-guide .guide-sidebar li { padding:.3rem 0; }
-.page-weihnachten-guide .guide-sidebar a:hover { color:var(--color-accent); }
-.page-weihnachten-guide .guide-sidebar .print-button { margin-top:1rem; width:100%; }
-.page-weihnachten-guide .guide-article { min-width:0; }
-.page-weihnachten-guide .guide-article > section { margin-top:var(--space-4); padding-top:var(--space-4); border-top:1px solid var(--color-line); }
-.page-weihnachten-guide .guide-article > section:first-child { margin-top:0; padding-top:0; border-top:0; }
-.page-weihnachten-guide .guide-note { padding:1rem 1.25rem; border-left:3px solid var(--color-accent); background:var(--color-bg-alt); }
-.page-weihnachten-guide .timeline { margin:1.5rem 0; }
-.page-weihnachten-guide .timeline-item { display:grid; grid-template-columns:7rem 1fr; gap:1rem; padding:1rem 0; border-bottom:1px solid var(--color-line); }
-.page-weihnachten-guide .timeline-kicker { color:var(--color-accent); font-size:.85rem; font-weight:600; }
-.page-weihnachten-guide .timeline-marker { display:none; }
-.page-weihnachten-guide .step-list { padding-left:1.3rem; list-style:decimal; }
-.page-weihnachten-guide .step-list li { padding:.35rem 0; }
-.page-weihnachten-guide .budget-board { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; margin:1.5rem 0; }
-.page-weihnachten-guide .budget-board > * { min-width:0; padding:1rem; border:1px solid var(--color-line); background:var(--color-card-bg); }
-.page-weihnachten-guide .checklist-group { margin-top:1.5rem; }
-.page-weihnachten-guide .print-only { display:none; }
-@media (max-width:760px) {
- .season-hero__inner,.season-principles,.page-weihnachten-guide .guide-layout { grid-template-columns:1fr; }
- .season-hero__art { min-height:260px; }
- .season-topic-grid { grid-template-columns:1fr; }
- .season-band__inner { align-items:flex-start; flex-direction:column; }
- .page-weihnachten-guide .page-weihnachten-guide .guide-sidebar { position:static; }
- .page-weihnachten-guide .page-weihnachten-guide .budget-board { grid-template-columns:1fr; }
- .page-weihnachten-guide .page-weihnachten-guide .timeline-item { grid-template-columns:1fr; gap:.25rem; }
+/* =========================================================
+   SaisonKompass — Weihnachten Design System
+   Loaded only by Weihnachten pages.
+   Shared Halloween styles remain unchanged.
+   ========================================================= */
+
+/* 1. WINTER COLOR PALETTE */
+
+body.page-weihnachten,
+body.page-weihnachten-guide {
+  --winter-green: #203C34;
+  --winter-green-deep: #172E29;
+  --winter-green-soft: #496057;
+  --winter-ivory: #F4EFE4;
+  --winter-paper: #E7DCC3;
+  --winter-gold: #A58A50;
+  --winter-berry: #6F292E;
+
+  --color-bg: var(--winter-ivory);
+  --color-bg-alt: var(--winter-paper);
+  --color-card-bg: #FBF8F1;
+  --color-ink: #26211D;
+  --color-muted: #5D564D;
+  --color-line: #D7CCBA;
+  --color-accent: var(--winter-green);
 }
+
+/* 2. BASE AND READABILITY */
+
+body.page-weihnachten,
+body.page-weihnachten-guide {
+  color: var(--color-ink);
+  background: var(--winter-ivory);
+  overflow-wrap: break-word;
+}
+
+body.page-weihnachten *,
+body.page-weihnachten-guide * {
+  box-sizing: border-box;
+}
+
+body.page-weihnachten img,
+body.page-weihnachten-guide img {
+  max-width: 100%;
+  height: auto;
+}
+
+body.page-weihnachten h1,
+body.page-weihnachten h2,
+body.page-weihnachten h3,
+body.page-weihnachten-guide h1,
+body.page-weihnachten-guide h2,
+body.page-weihnachten-guide h3 {
+  color: var(--winter-green);
+  word-break: normal;
+  hyphens: auto;
+}
+
+body.page-weihnachten p,
+body.page-weihnachten-guide p,
+body.page-weihnachten-guide li {
+  line-height: 1.7;
+}
+
+/* 3. CHRISTMAS HERO */
+
+body.page-weihnachten .season-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 7vw, 6rem) 0;
+  background: var(--winter-paper);
+}
+
+body.page-weihnachten .season-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+body.page-weihnachten .season-hero__copy {
+  min-width: 0;
+  max-width: 680px;
+}
+
+body.page-weihnachten .season-hero h1 {
+  max-width: 13ch;
+  line-height: 1.15;
+}
+
+body.page-weihnachten .season-hero__lead {
+  max-width: 58ch;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: var(--color-muted);
+}
+
+body.page-weihnachten .season-hero__note {
+  margin-top: 1rem;
+  font-size: .9rem;
+}
+
+body.page-weihnachten .season-hero__art {
+  position: relative;
+  min-width: 0;
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--winter-green);
+}
+
+body.page-weihnachten .winter-sun {
+  position: absolute;
+  top: 16%;
+  right: 18%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: #B85A2A;
+  opacity: .95;
+}
+
+body.page-weihnachten .winter-tree {
+  position: absolute;
+  bottom: -4%;
+  width: 0;
+  height: 0;
+  border-right: 130px solid transparent;
+  border-bottom: 290px solid var(--winter-green-soft);
+  border-left: 130px solid transparent;
+}
+
+body.page-weihnachten .winter-tree--back {
+  left: 4%;
+  transform: scale(.78);
+  transform-origin: bottom;
+  opacity: .75;
+}
+
+body.page-weihnachten .winter-tree--front {
+  right: 0;
+  border-bottom-color: var(--winter-green-deep);
+}
+
+body.page-weihnachten .winter-star {
+  position: absolute;
+  color: var(--winter-ivory);
+  font-size: 2rem;
+}
+
+body.page-weihnachten .winter-star--one {
+  top: 12%;
+  left: 18%;
+}
+
+body.page-weihnachten .winter-star--two {
+  top: 34%;
+  right: 12%;
+}
+
+body.page-weihnachten .winter-orbit {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 240px;
+  height: 240px;
+  border: 1px solid rgb(244 239 228 / 45%);
+  border-radius: 50%;
+}
+
+body.page-weihnachten .winter-art-label {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  color: var(--winter-ivory);
+  font: 500 1.1rem/1.3 "Newsreader", Georgia, serif;
+  letter-spacing: .02em;
+}
+
+/* 4. LANDING PAGE TOPIC CARDS */
+
+body.page-weihnachten .season-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+body.page-weihnachten .season-topic {
+  display: flex;
+  min-width: 0;
+  min-height: 230px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-card-bg);
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+body.page-weihnachten .season-topic:hover {
+  transform: translateY(-2px);
+  border-color: var(--winter-gold);
+}
+
+body.page-weihnachten .season-topic--featured {
+  color: var(--winter-ivory);
+  background: var(--winter-green);
+}
+
+body.page-weihnachten .season-topic--featured h3,
+body.page-weihnachten .season-topic--featured p {
+  color: var(--winter-ivory);
+}
+
+body.page-weihnachten .season-topic__number {
+  color: var(--winter-gold);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+body.page-weihnachten .season-topic__symbol {
+  align-self: flex-end;
+  font-size: 1.5rem;
+}
+
+body.page-weihnachten .season-topic h3 {
+  margin-top: .75rem;
+}
+
+body.page-weihnachten .season-topic p {
+  margin-bottom: 1rem;
+}
+
+body.page-weihnachten .season-topic__link {
+  margin-top: auto;
+  padding-bottom: .15rem;
+  border-bottom: 1px solid currentColor;
+  font-weight: 600;
+}
+
+/* 5. DARK SEASONAL BAND */
+
+body.page-weihnachten .season-band {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  color: var(--winter-ivory);
+  background: var(--winter-green);
+}
+
+body.page-weihnachten .season-band h2,
+body.page-weihnachten .season-band p {
+  color: var(--winter-ivory);
+}
+
+body.page-weihnachten .season-band__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+body.page-weihnachten .eyebrow--inverted {
+  color: #E5D5AD;
+}
+
+/* 6. PRINCIPLES AND FAQ */
+
+body.page-weihnachten .season-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+body.page-weihnachten .season-principle-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.page-weihnachten .season-principle-list li {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+body.page-weihnachten .season-principle-list li > span {
+  color: var(--winter-gold);
+  font-weight: 600;
+}
+
+body.page-weihnachten .season-faq details {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+body.page-weihnachten .season-faq summary {
+  color: var(--winter-green);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+body.page-weihnachten .season-faq details p {
+  margin-top: .75rem;
+}
+
+/* 7. GUIDE DESKTOP LAYOUT */
+
+body.page-weihnachten-guide .guide-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  width: 100%;
+}
+
+body.page-weihnachten-guide .guide-sidebar {
+  position: sticky;
+  top: 1rem;
+  float: none;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-card-bg);
+}
+
+body.page-weihnachten-guide .guide-sidebar ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+body.page-weihnachten-guide .guide-sidebar li {
+  padding: .35rem 0;
+  line-height: 1.5;
+}
+
+body.page-weihnachten-guide .guide-sidebar a {
+  color: var(--color-ink);
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .2em;
+}
+
+body.page-weihnachten-guide .guide-sidebar a:hover {
+  color: var(--winter-green);
+}
+
+body.page-weihnachten-guide .guide-sidebar .print-button {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.25rem;
+  padding: .8rem 1rem;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+body.page-weihnachten-guide .guide-article {
+  position: relative;
+  float: none;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
+}
+
+body.page-weihnachten-guide .guide-article > section {
+  width: 100%;
+  min-width: 0;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-line);
+}
+
+body.page-weihnachten-guide .guide-article > section:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+body.page-weihnachten-guide .guide-article h2 {
+  max-width: 100%;
+  line-height: 1.25;
+}
+
+body.page-weihnachten-guide .guide-article p,
+body.page-weihnachten-guide .guide-article li {
+  max-width: 70ch;
+  overflow-wrap: break-word;
+}
+
+body.page-weihnachten-guide .guide-note {
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--winter-gold);
+  background: var(--winter-paper);
+}
+
+body.page-weihnachten-guide .timeline {
+  margin: 1.5rem 0;
+}
+
+body.page-weihnachten-guide .timeline-item {
+  display: grid;
+  grid-template-columns: minmax(7rem, 9rem) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+body.page-weihnachten-guide .timeline-kicker {
+  color: var(--winter-green);
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+body.page-weihnachten-guide .timeline-marker {
+  display: none;
+}
+
+body.page-weihnachten-guide .step-list {
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+
+body.page-weihnachten-guide .step-list li {
+  padding: .35rem 0;
+}
+
+body.page-weihnachten-guide .budget-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .75rem;
+  margin: 1.5rem 0;
+}
+
+body.page-weihnachten-guide .budget-board > * {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-card-bg);
+}
+
+body.page-weihnachten-guide .checklist-group {
+  min-width: 0;
+  margin-top: 1.5rem;
+}
+
+body.page-weihnachten-guide .checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+body.page-weihnachten-guide .checklist input {
+  flex: 0 0 auto;
+  margin-top: .35em;
+}
+
+body.page-weihnachten-guide .print-only {
+  display: none;
+}
+
+/* 8. TABLET LAYOUT */
+
+@media (max-width: 900px) {
+  body.page-weihnachten-guide .guide-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+
+  body.page-weihnachten-guide .budget-board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 9. MOBILE LAYOUT */
+
+@media (max-width: 760px) {
+  body.page-weihnachten .season-hero__inner,
+  body.page-weihnachten .season-principles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.page-weihnachten .season-hero__art {
+    width: 100%;
+    min-width: 0;
+    min-height: 250px;
+  }
+
+  body.page-weihnachten .season-topic-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.page-weihnachten .season-band__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  body.page-weihnachten-guide .guide-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar {
+    position: static;
+    float: none;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar nav,
+  body.page-weihnachten-guide .guide-sidebar ol {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar ol {
+    display: block;
+    margin: 0;
+    padding-left: 1.5rem;
+    list-style: decimal;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar li {
+    display: list-item;
+    padding: .4rem 0;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar a {
+    display: inline;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  body.page-weihnachten-guide .guide-sidebar .print-button {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    padding: .8rem 1rem;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  body.page-weihnachten-guide .guide-article {
+    display: block;
+    position: relative;
+    float: none;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body.page-weihnachten-guide .guide-article > section {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  body.page-weihnachten-guide .guide-article > section:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  body.page-weihnachten-guide .guide-article h2,
+  body.page-weihnachten-guide .guide-article h3 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+    line-height: 1.3;
+  }
+
+  body.page-weihnachten-guide .guide-article p,
+  body.page-weihnachten-guide .guide-article li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  body.page-weihnachten-guide .timeline-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: .5rem;
+  }
+
+  body.page-weihnachten-guide .budget-board {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: .75rem;
+  }
+
+  body.page-weihnachten-guide .budget-board > * {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  body.page-weihnachten-guide .checklist-group,
+  body.page-weihnachten-guide .print-checklist {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  body.page-weihnachten-guide .guide-note {
+    padding: .9rem 1rem;
+  }
+}
+
+/* 10. PRINT CHECKLIST */
+
 @media print {
-  body.page-weihnachten-guide * { visibility: hidden !important; }
-  .page-weihnachten-guide .print-checklist,
-  .page-weihnachten-guide .print-checklist * { visibility: visible !important; }
-  .page-weihnachten-guide .print-checklist { position: absolute; inset: 0 auto auto 0; width: 100%; padding: 0; margin: 0; border: 0; }
-  .page-weihnachten-guide .print-checklist input { appearance: none; width: 12px; height: 12px; border: 1px solid #333; margin-right: .5rem; }
-  .page-weihnachten-guide .print-only { display: block; margin-top: 1rem; }
-  .page-weihnachten-guide .site-header,
-  .page-weihnachten-guide .site-footer,
-  .page-weihnachten-guide .guide-sidebar,
-  .page-weihnachten-guide .hero,
-  .page-weihnachten-guide .breadcrumb-nav,
-  .page-weihnachten-guide .section:not(:has(.print-checklist)) { display: none !important; }
+  body.page-weihnachten-guide * {
+    visibility: hidden !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist,
+  body.page-weihnachten-guide .print-checklist * {
+    visibility: visible !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  body.page-weihnachten-guide .print-checklist input {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    margin-right: .5rem;
+    border: 1px solid #333;
+  }
+
+  body.page-weihnachten-guide .print-only {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  body.page-weihnachten-guide .site-header,
+  body.page-weihnachten-guide .site-footer,
+  body.page-weihnachten-guide .guide-sidebar,
+  body.page-weihnachten-guide .hero,
+  body.page-weihnachten-guide .breadcrumb-nav {
+    display: none !important;
+  }
 }
-@media (prefers-reduced-motion:reduce) { .season-topic { transition:none; } .season-topic:hover { transform:none; } }
+
+/* 11. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-weihnachten .season-topic {
+    transition: none;
+  }
+
+  body.page-weihnachten .season-topic:hover {
+    transform: none;
+  }
+}
