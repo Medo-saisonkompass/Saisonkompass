@@ -643,46 +643,190 @@ body.page-weihnachten-guide .print-only {
   }
 }
 
-/* 10. PRINT CHECKLIST */
+/* ==========================================================================
+   Weihnachten — Print stylesheet
+   Druckt ausschließlich die Checkliste auf A4.
+   ========================================================================== */
 
 @media print {
-  body.page-weihnachten-guide * {
-    visibility: hidden !important;
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
   }
 
+  html,
+  body.page-weihnachten-guide {
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #26211D !important;
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hide page content visually by default. */
+  body.page-weihnachten-guide * {
+    visibility: hidden !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Keep the checklist's ancestor chain available for printing. */
+  body.page-weihnachten-guide main,
+  body.page-weihnachten-guide main > .section,
+  body.page-weihnachten-guide main > .section > .wrap,
+  body.page-weihnachten-guide .guide-layout,
+  body.page-weihnachten-guide .guide-article,
   body.page-weihnachten-guide .print-checklist,
   body.page-weihnachten-guide .print-checklist * {
     visibility: visible !important;
   }
 
-  body.page-weihnachten-guide .print-checklist {
-    position: absolute;
-    inset: 0 auto auto 0;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
-
-  body.page-weihnachten-guide .print-checklist input {
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    margin-right: .5rem;
-    border: 1px solid #333;
-  }
-
-  body.page-weihnachten-guide .print-only {
-    display: block;
-    margin-top: 1rem;
-  }
-
+  /* Remove the elements that are not part of the checklist. */
   body.page-weihnachten-guide .site-header,
   body.page-weihnachten-guide .site-footer,
-  body.page-weihnachten-guide .guide-sidebar,
-  body.page-weihnachten-guide .hero,
-  body.page-weihnachten-guide .breadcrumb-nav {
+  body.page-weihnachten-guide .breadcrumb-nav,
+  body.page-weihnachten-guide main > .hero,
+  body.page-weihnachten-guide .guide-sidebar {
     display: none !important;
+  }
+
+  /* Hide every article section except the checklist. */
+  body.page-weihnachten-guide .guide-article > section:not(.print-checklist) {
+    display: none !important;
+  }
+
+  /* Remove the desktop grid and its unused space. */
+  body.page-weihnachten-guide main > .section,
+  body.page-weihnachten-guide main > .section > .wrap,
+  body.page-weihnachten-guide .guide-layout,
+  body.page-weihnachten-guide .guide-article {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: #ffffff !important;
+    color: #26211D !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Compact, readable typography for paper. */
+  body.page-weihnachten-guide .print-checklist h2 {
+    margin: 0 0 4mm !important;
+    font-size: 19pt !important;
+    line-height: 1.2 !important;
+    color: #263B35 !important;
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist > .eyebrow {
+    margin: 0 0 2mm !important;
+    font-size: 9pt !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist > p:not(.eyebrow):not(.print-only) {
+    max-width: none !important;
+    margin: 0 0 5mm !important;
+    font-size: 9pt !important;
+    line-height: 1.45 !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist-group {
+    margin: 0 0 4mm !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist-group h3 {
+    margin: 0 0 1.5mm !important;
+    font-size: 10pt !important;
+    line-height: 1.25 !important;
+    color: #263B35 !important;
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 0.4pt solid #D8D1C4 !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist label {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 2.5mm !important;
+    margin: 0 !important;
+    padding: 2mm 0 !important;
+    color: #26211D !important;
+    font-size: 9pt !important;
+    line-height: 1.35 !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist input[type="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    flex: 0 0 3.5mm !important;
+    width: 3.5mm !important;
+    height: 3.5mm !important;
+    margin: 0.5mm 0 0 !important;
+    padding: 0 !important;
+    border: 0.7pt solid #26211D !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .checklist label span {
+    display: block !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+
+  body.page-weihnachten-guide .print-checklist .print-only {
+    display: block !important;
+    margin: 5mm 0 0 !important;
+    padding-top: 2mm !important;
+    border-top: 0.5pt solid #D8D1C4 !important;
+    color: #55493E !important;
+    font-size: 8pt !important;
+  }
+
+  /* Prevent decorative rules from adding unwanted print marks. */
+  body.page-weihnachten-guide .print-checklist::before,
+  body.page-weihnachten-guide .print-checklist::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
   }
 }
 
