@@ -1,39 +1,40 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/halloween/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/guides/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/guides/halloween-party-planen/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/guides/halloween-kostuem-finden/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/guides/halloween-deko-ideen/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/ueber-uns/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/affiliate-hinweis/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/impressum/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/datenschutz/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/weihnachten/</ns0:loc>
-</ns0:url>
-<ns0:url>
-<ns0:loc>https://saisonkompass.de/guides/weihnachten-planen/</ns0:loc>
-</ns0:url>
-</ns0:urlset>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://saisonkompass.de/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/halloween/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/guides/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/guides/halloween-party-planen/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/guides/halloween-kostuem-finden/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/guides/halloween-deko-ideen/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/weihnachten/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/guides/weihnachten-planen/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/ueber-uns/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/affiliate-hinweis/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/impressum/</loc>
+  </url>
+  <url>
+    <loc>https://saisonkompass.de/datenschutz/</loc>
+  </url>
+</urlset>
