@@ -1,1 +1,105 @@
-
+/* SaisonKompass — Black Friday 2026 page. Uses the shared design tokens in styles.css. */
+.bf-hero { overflow:hidden; border-bottom:1px solid var(--color-line); }
+.bf-hero__grid { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr); gap:clamp(2rem,5vw,5rem); align-items:center; padding-top:clamp(3.5rem,8vw,7rem); padding-bottom:clamp(3.5rem,8vw,7rem); }
+.bf-hero h1 { max-width:13ch; margin-bottom:1.25rem; }
+.bf-hero__lead { font-size:1.12rem; max-width:53ch; }
+.bf-hero__note { font-size:.82rem; margin-top:1.25rem; }
+.bf-hero__art { min-height:350px; position:relative; display:grid; place-items:center; background:var(--color-bg-alt); overflow:hidden; }
+.bf-orbit { position:absolute; border:1px solid rgba(91,75,110,.38); border-radius:50%; transform:rotate(-28deg); }
+.bf-orbit--one { width:115%; height:55%; }
+.bf-orbit--two { width:90%; height:82%; transform:rotate(34deg); }
+.bf-paper { position:relative; z-index:1; width:min(70%,290px); min-height:265px; padding:2rem 1.75rem; background:var(--color-card-bg); box-shadow:14px 16px 0 rgba(38,33,29,.08); transform:rotate(-4deg); }
+.bf-paper__eyebrow { display:block; font-size:.68rem; letter-spacing:.16em; margin-bottom:1.6rem; color:var(--color-violet); }
+.bf-paper__line { display:block; width:67%; height:1px; margin:1rem 0; background:var(--color-line); }
+.bf-paper__line--long { width:100%; }
+.bf-paper__line--short { width:44%; }
+.bf-paper__check { display:block; color:var(--color-accent); font-size:1.7rem; margin-top:.5rem; }
+.bf-paper__stamp { display:block; margin-top:1.5rem; font-family:var(--font-display); font-size:1.35rem; line-height:1.05; }
+.bf-art-caption { position:absolute; right:1rem; bottom:1rem; font-family:var(--font-display); font-style:italic; color:var(--color-ink-soft); font-size:.9rem; }
+.bf-intro__grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:clamp(2rem,7vw,7rem); }
+.bf-intro__grid h2 { max-width:14ch; }
+.bf-intro__statement { border-left:3px solid var(--color-accent); padding:.3rem 0 .3rem 1rem; font-family:var(--font-display); font-size:1.3rem; color:var(--color-ink); }
+.bf-three-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+.bf-card { padding:1.5rem; border:1px solid var(--color-line); background:var(--color-card-bg); min-height:230px; }
+.bf-card__index { display:block; font-family:var(--font-display); color:var(--color-accent); font-size:1.8rem; margin-bottom:1.4rem; }
+.bf-card h3 { margin-bottom:.65rem; }
+.bf-card p { margin-bottom:0; font-size:.94rem; }
+.bf-split { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:clamp(2rem,7vw,7rem); align-items:start; }
+.bf-split h2 { max-width:15ch; }
+.bf-steps { border-top:1px solid var(--color-line); }
+.bf-steps > div { display:grid; grid-template-columns:3rem 1fr; gap:1rem; align-items:start; padding:1rem 0; border-bottom:1px solid var(--color-line); }
+.bf-steps span { font-family:var(--font-display); color:var(--color-accent); font-size:1.25rem; }
+.bf-steps p { margin:0; }
+.section--dark { background:var(--color-ink); color:var(--color-on-dark); }
+.section--dark h2,.section--dark h3 { color:var(--color-on-dark); }
+.section--dark p { color:rgba(241,234,217,.78); }
+.section--dark a:not(.button) { text-decoration:underline; text-decoration-color:var(--color-accent); text-underline-offset:3px; }
+.bf-split--dark { align-items:start; }
+.bf-checkpoints article { padding:0 0 1.15rem; margin-bottom:1.15rem; border-bottom:1px solid rgba(241,234,217,.2); }
+.bf-checkpoints article:last-child { border-bottom:0; margin-bottom:0; }
+.bf-checkpoints h3 { font-size:1rem; margin-bottom:.35rem; }
+.bf-checkpoints p { margin-bottom:0; }
+.bf-plan-intro { display:flex; justify-content:space-between; align-items:start; gap:2rem; padding:1rem 1.25rem; margin:0 0 1.25rem; background:var(--color-bg-alt); border-left:3px solid var(--color-accent); }
+.bf-plan-intro p { margin:0; }
+.bf-plan-intro span { flex:0 0 auto; font-size:.75rem; color:var(--color-violet); text-transform:uppercase; letter-spacing:.08em; }
+.bf-table-wrap { overflow-x:auto; border:1px solid var(--color-line); background:var(--color-card-bg); }
+.bf-buy-table { width:100%; border-collapse:collapse; min-width:780px; font-size:.8rem; }
+.bf-buy-table th,.bf-buy-table td { border-right:1px solid var(--color-line); border-bottom:1px solid var(--color-line); padding:.7rem; text-align:left; vertical-align:top; }
+.bf-buy-table th { background:var(--color-bg-alt); font-weight:600; line-height:1.35; }
+.bf-buy-table td { height:74px; }
+.bf-buy-table th:last-child,.bf-buy-table td:last-child { border-right:0; }
+.bf-buy-table tbody tr:last-child td { border-bottom:0; }
+.write-line { display:block; min-width:42px; height:1.5rem; border-bottom:1px solid rgba(38,33,29,.3); }
+.bf-buy-table small { display:block; color:var(--color-ink-soft); font-size:.7rem; margin-top:.25rem; }
+.bf-table-note { margin-top:.85rem; font-size:.84rem; }
+.bf-print-actions { display:flex; align-items:center; gap:1rem; margin-top:1.25rem; }
+.bf-print-actions span { font-size:.8rem; color:var(--color-ink-soft); }
+.bf-gift-note { padding:2rem; background:var(--color-card-bg); border:1px solid var(--color-line); }
+.bf-gift-note__symbol { color:var(--color-accent); font-size:1.7rem; }
+.bf-gift-note h3 { margin-top:.5rem; }
+.bf-gift-note ul { list-style:none; padding:0; margin:1rem 0 0; }
+.bf-gift-note li { position:relative; padding:.65rem 0 .65rem 1.5rem; border-top:1px solid var(--color-line); color:var(--color-ink-soft); }
+.bf-gift-note li::before { content:"✓"; position:absolute; left:0; color:var(--color-accent); }
+.bf-last-check { display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(2rem,7vw,7rem); }
+.bf-checklist { list-style:none; padding:0; margin:0; }
+.bf-checklist li { position:relative; padding:.85rem 0 .85rem 2rem; border-bottom:1px solid var(--color-line); color:var(--color-ink-soft); }
+.bf-checklist li::before { content:""; position:absolute; left:0; top:1.12rem; width:.85rem; height:.85rem; border:1px solid var(--color-accent); }
+.bf-faq { max-width:820px; }
+.bf-faq h2 { margin-bottom:1.5rem; }
+.bf-faq details { border-top:1px solid var(--color-line); padding:1rem 0; }
+.bf-faq details:last-child { border-bottom:1px solid var(--color-line); }
+.bf-faq summary { cursor:pointer; font-weight:600; color:var(--color-ink); }
+.bf-faq details p { margin:.8rem 0 0; }
+.bf-end { background:var(--color-violet); color:var(--color-on-dark); }
+.bf-end__inner { padding-top:clamp(3rem,6vw,5rem); padding-bottom:clamp(3rem,6vw,5rem); }
+.bf-end h2 { max-width:18ch; color:var(--color-on-dark); }
+.bf-end p:not(.eyebrow) { color:rgba(241,234,217,.82); }
+@media (max-width:760px) {
+  .bf-hero__grid,.bf-intro__grid,.bf-split,.bf-last-check { grid-template-columns:1fr; }
+  .bf-hero__grid { gap:2rem; padding-top:3rem; padding-bottom:3rem; }
+  .bf-hero__art { min-height:290px; }
+  .bf-three-grid { grid-template-columns:1fr; }
+  .bf-card { min-height:0; }
+  .bf-card__index { margin-bottom:.6rem; }
+  .bf-plan-intro { display:block; }
+  .bf-plan-intro span { display:block; margin-top:.75rem; }
+  .bf-print-actions { align-items:flex-start; flex-direction:column; }
+}
+@media print {
+  @page { size:A4 landscape; margin:10mm; }
+  body { background:#fff !important; color:#000 !important; font-size:10pt; }
+  .site-header,.breadcrumb-nav,.bf-hero,.bf-intro,.section:not(:has(#kaufplan)),.bf-print-actions,.site-footer { display:none !important; }
+  main > section:has(#kaufplan) { display:block !important; padding:0 !important; }
+  #kaufplan .wrap { max-width:none; padding:0; }
+  #kaufplan .section-heading { margin-bottom:8mm; }
+  #kaufplan .section-heading h2 { font-size:20pt; margin-bottom:2mm; }
+  #kaufplan .section-heading p { font-size:9pt; margin-bottom:0; }
+  .bf-plan-intro { padding:4mm; margin-bottom:4mm; }
+  .bf-plan-intro p { font-size:9pt; }
+  .bf-plan-intro span { font-size:8pt; }
+  .bf-table-wrap { overflow:visible; border:1px solid #888; }
+  .bf-buy-table { min-width:0; width:100%; font-size:8pt; }
+  .bf-buy-table th,.bf-buy-table td { padding:3mm; border-color:#bbb; }
+  .bf-buy-table td { height:17mm; }
+  .bf-table-note { font-size:8pt; margin-top:3mm; }
+}
