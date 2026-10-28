@@ -20,6 +20,7 @@ const REQUIRED = [
   "404.html",
   "halloween",
   "weihnachten",
+  "black-friday",
   "guides",
   "ueber-uns",
   "affiliate-hinweis",
