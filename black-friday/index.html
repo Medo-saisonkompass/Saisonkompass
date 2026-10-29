@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <title>Black Friday 2026: Angebote prüfen &amp; Weihnachtseinkäufe planen | SaisonKompass</title>
   <meta name="description" content="Black Friday 2026 sinnvoll nutzen: Wunschliste erstellen, Preise vergleichen, Budget festlegen und Weihnachtseinkäufe ohne Kaufdruck planen.">
   <link rel="canonical" href="https://saisonkompass.de/black-friday/">
@@ -18,16 +17,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/black-friday.css">
-  <meta name="theme-color" content="#F1E8D8">
+  <meta name="theme-color" content="#F1EAD9">
 </head>
 <body>
 <a class="skip-link" href="#main">Zum Inhalt springen</a>
 <header class="site-header">
   <div class="wrap site-header__inner">
-    <a class="brand" href="/" aria-label="SaisonKompass – Startseite"><span class="brand__word">SaisonKompass</span></a>
-    <nav class="site-nav" aria-label="Hauptnavigation"><ul>
-      <li><a href="/weihnachten/">Weihnachten</a></li>
+    <a class="brand" href="/" aria-label="SaisonKompass – Startseite">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2" />
+  <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#C1531B" />
+  <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#5B4B6E" />
+  <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#E7DCC3" />
+  <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#C1531B" />
+  <circle cx="32" cy="32" r="2.8" fill="#26211D" />
+</svg>
+      <span class="brand__word">SaisonKompass</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="visually-hidden" id="navToggleLabel">Menü öffnen</span>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation"><ul>
       <li><a href="/black-friday/" aria-current="page">Black Friday</a></li>
+      <li><a href="/weihnachten/">Weihnachten</a></li>
       <li><a href="/ueber-uns/">Über uns</a></li>
     </ul></nav>
   </div>
@@ -89,7 +104,14 @@
 
   <section class="bf-end"><div class="wrap bf-end__inner"><p class="eyebrow eyebrow--inverted">Saisons. Ideen. Orientierung.</p><h2>Plane zuerst. Vergleiche danach. Entscheide bewusst.</h2><p>Black Friday ist eine Gelegenheit, geplante Einkäufe zu überprüfen – keine Verpflichtung, mehr zu kaufen.</p></div></section>
 </main>
-<footer class="site-footer"><div class="wrap site-footer__inner"><a class="brand" href="/" aria-label="SaisonKompass – Startseite"><span class="brand__word">SaisonKompass</span></a><p class="site-footer__tagline">Dein Guide für Feste, Events &amp; saisonale Erlebnisse.</p><nav aria-label="Rechtliches"><ul class="footer-nav"><li><a href="/ueber-uns/">Über uns</a></li><li><a href="/affiliate-hinweis/">Affiliate-Hinweis</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li></ul></nav><p class="site-footer__copy">© 2026 SaisonKompass</p></div></footer>
+<footer class="site-footer"><div class="wrap site-footer__inner"><a class="brand brand--footer" href="/" aria-label="SaisonKompass – Startseite"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2" />
+  <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#C1531B" />
+  <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#5B4B6E" />
+  <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#E7DCC3" />
+  <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#C1531B" />
+  <circle cx="32" cy="32" r="2.8" fill="#26211D" />
+</svg><span class="brand__word">SaisonKompass</span></a><p class="site-footer__tagline">Dein Guide für Feste, Events &amp; saisonale Erlebnisse.</p><nav aria-label="Rechtliches"><ul class="footer-nav"><li><a href="/ueber-uns/">Über uns</a></li><li><a href="/affiliate-hinweis/">Affiliate-Hinweis</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li></ul></nav><p class="site-footer__copy">© 2026 SaisonKompass</p></div></footer>
 <script>
   (() => {
     const rows = document.querySelectorAll('.bf-buy-table tbody tr');
@@ -112,5 +134,6 @@
     });
   })();
 </script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
