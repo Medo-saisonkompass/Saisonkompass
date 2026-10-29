@@ -1167,3 +1167,121 @@ a.intent-card,
   height: 1.25rem;
   flex: 0 0 1.25rem;
 }
+
+/* ======================================================================
+   Homepage — SaisonKompass discovery hub
+   Scoped to .home-page to avoid changing seasonal pages.
+   ====================================================================== */
+.home-page .site-header { background: var(--color-bg); }
+.home-page .home-hero {
+  position: relative;
+  overflow: hidden;
+  background: #173D35;
+  color: #F1EAD9;
+  padding: clamp(3rem, 8vw, 6.5rem) 0 1.5rem;
+}
+.home-page .home-hero::before,
+.home-page .home-hero::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(241, 234, 217, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.home-page .home-hero::before { width: 38rem; height: 38rem; right: -15rem; top: -20rem; }
+.home-page .home-hero::after { width: 27rem; height: 27rem; right: -9.5rem; top: -14.5rem; }
+.home-page .home-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+}
+.home-page .home-hero__copy { max-width: 42rem; }
+.home-page .home-kicker {
+  color: #D7C6A1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin: 0 0 1.2rem;
+}
+.home-page .home-hero h1 { color: #F1EAD9; max-width: 12ch; font-size: clamp(2.8rem, 6vw, 5rem); letter-spacing: -0.035em; }
+.home-page .home-hero__lead { color: rgba(241, 234, 217, 0.82); max-width: 37rem; font-size: clamp(1rem, 1.5vw, 1.15rem); }
+.home-page .home-hero__actions { justify-content: flex-start; }
+.home-page .home-button-primary { background: #E7DCC3; color: #173D35; }
+.home-page .home-button-primary:hover { background: #F1EAD9; }
+.home-page .home-button-secondary { border-color: rgba(241, 234, 217, 0.6); color: #F1EAD9; }
+.home-page .home-button-secondary:hover { background: rgba(241, 234, 217, 0.1); color: #F1EAD9; }
+.home-page .home-hero__visual { position: relative; width: min(100%, 360px); aspect-ratio: 1; margin-inline: auto; }
+.home-page .home-orbit { position: absolute; border: 1px solid rgba(241, 234, 217, 0.28); border-radius: 50%; inset: 5%; }
+.home-page .home-orbit--inner { inset: 18%; border-style: dashed; border-color: rgba(215, 198, 161, 0.45); }
+.home-page .home-compass { position: absolute; inset: 27%; border: 1px solid rgba(241, 234, 217, 0.45); border-radius: 50%; display: grid; place-items: center; }
+.home-page .home-compass__north { position: absolute; top: 7%; color: #D7C6A1; font-family: var(--font-display); font-size: 0.8rem; }
+.home-page .home-compass__needle { position: absolute; width: 0; height: 0; border-left: 22px solid transparent; border-right: 22px solid transparent; }
+.home-page .home-compass__needle--north { border-bottom: 64px solid #D7C6A1; top: 17%; }
+.home-page .home-compass__needle--south { border-top: 64px solid #C1531B; bottom: 17%; }
+.home-page .home-compass__center { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: #F1EAD9; border: 3px solid #173D35; z-index: 1; }
+.home-page .home-orbit-label { position: absolute; padding: 0.4rem 0.7rem; border: 1px solid rgba(241, 234, 217, 0.28); border-radius: 999px; background: #173D35; color: #F1EAD9; font-size: 0.78rem; letter-spacing: 0.03em; }
+.home-page .home-orbit-label--one { top: 9%; left: 4%; }
+.home-page .home-orbit-label--two { right: -2%; top: 48%; }
+.home-page .home-orbit-label--three { bottom: 8%; left: 9%; }
+.home-page .home-hero__footnote { display: flex; align-items: center; justify-content: center; gap: 0.65rem; margin-top: clamp(2.5rem, 6vw, 4.5rem); padding-top: 1rem; border-top: 1px solid rgba(241, 234, 217, 0.18); color: rgba(241, 234, 217, 0.65); font-size: 0.82rem; }
+.home-page .home-hero__footnote span { display: inline-block; width: 1.5rem; height: 2px; background: #D7C6A1; }
+.home-page .home-section-heading { max-width: 45rem; margin-bottom: var(--space-4); }
+.home-page .home-section-heading > p:last-child { margin-bottom: 0; }
+.home-page .home-season-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+.home-page .home-season-card { display: flex; flex-direction: column; min-width: 0; background: var(--color-card-bg); border: 1px solid var(--color-line); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.home-page .home-season-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(38, 33, 29, 0.09); }
+.home-page .home-season-card:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+.home-page .home-season-card img { display: block; width: 100%; aspect-ratio: 5 / 3; object-fit: cover; }
+.home-page .home-season-card__body { display: flex; flex-direction: column; align-items: flex-start; gap: 0.55rem; padding: clamp(1rem, 2vw, 1.5rem); flex: 1; }
+.home-page .home-season-card__eyebrow { color: var(--color-violet); font-family: var(--font-display); font-style: italic; font-size: 0.9rem; }
+.home-page .home-season-card__title { font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.15; }
+.home-page .home-season-card__description { color: var(--color-ink-soft); font-size: 0.92rem; }
+.home-page .home-season-card__link { margin-top: auto; padding-top: 0.65rem; color: var(--color-ink); font-weight: 600; font-size: 0.88rem; border-bottom: 1px solid var(--color-accent); }
+.home-page .home-season-card--halloween { border-top: 3px solid #C1531B; }
+.home-page .home-season-card--christmas { border-top: 3px solid #315B45; }
+.home-page .home-season-card--blackfriday { border-top: 3px solid #5B4B6E; }
+.home-page .home-seasons-note { margin: 1.5rem 0 0; font-size: 0.88rem; }
+.home-page .home-value-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+.home-page .home-value-item { border-top: 1px solid var(--color-line); padding-top: 1.1rem; }
+.home-page .home-value-item__number { display: block; color: var(--color-accent); font-family: var(--font-display); font-size: 1rem; margin-bottom: 1rem; }
+.home-page .home-value-item h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; }
+.home-page .home-value-item p { margin-bottom: 0; font-size: 0.94rem; }
+.home-page .home-guides { background: #E7DCC3; }
+.home-page .home-guides__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.home-page .home-guides__inner > div { max-width: 42rem; }
+.home-page .home-guides__inner h2 { margin-bottom: 0.75rem; }
+.home-page .home-guides__inner p:last-child { margin-bottom: 0; }
+.home-page .home-guides .home-button-secondary { color: var(--color-ink); border-color: var(--color-ink); flex: 0 0 auto; }
+.home-page .home-guides .home-button-secondary:hover { background: var(--color-ink); color: var(--color-bg); }
+.home-page .site-footer__inner { gap: var(--space-3); }
+@media (max-width: 800px) {
+  .home-page .home-hero__inner { grid-template-columns: minmax(0, 1fr); gap: 2.25rem; }
+  .home-page .home-hero__copy { max-width: 42rem; }
+  .home-page .home-hero__visual { width: min(76%, 300px); }
+  .home-page .home-hero h1 { max-width: 13ch; }
+  .home-page .home-season-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .home-page .home-season-card { display: grid; grid-template-columns: minmax(110px, 0.8fr) minmax(0, 1.2fr); }
+  .home-page .home-season-card img { height: 100%; min-height: 100%; aspect-ratio: auto; }
+  .home-page .home-season-card__body { padding: 1rem; }
+  .home-page .home-season-card__title { font-size: 1.55rem; }
+  .home-page .home-value-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .home-page .home-value-item { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 0.7rem; }
+  .home-page .home-value-item__number { grid-row: span 2; }
+  .home-page .home-value-item h3 { margin-bottom: 0.4rem; }
+  .home-page .home-value-item p { grid-column: 2; }
+  .home-page .home-guides__inner { align-items: flex-start; flex-direction: column; }
+}
+@media (max-width: 420px) {
+  .home-page .home-season-card { grid-template-columns: 1fr; }
+  .home-page .home-season-card img { aspect-ratio: 16 / 8; min-height: 0; }
+  .home-page .home-hero__actions { align-items: stretch; flex-direction: column; }
+  .home-page .home-hero__actions .button { text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page .home-season-card { transition: none; }
+  .home-page .home-season-card:hover { transform: none; }
+}
+
