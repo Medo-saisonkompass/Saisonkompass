@@ -377,6 +377,31 @@
 <script>
   (() => {
     const rows = document.querySelectorAll('.bf-buy-table tbody tr');
+    let printReplacements = [];
+
+    // Temporarily render field contents as wrapping text in the print layout.
+    window.addEventListener('beforeprint', () => {
+      printReplacements = [];
+      document.querySelectorAll('.bf-buy-table input').forEach((input) => {
+        const value = document.createElement('span');
+        value.className = 'bf-print-value';
+        value.textContent = input.value || '';
+        value.setAttribute('aria-label', input.getAttribute('aria-label') || '');
+        input.hidden = true;
+        input.insertAdjacentElement('afterend', value);
+        printReplacements.push({ input, value });
+      });
+    });
+
+    const restorePrintFields = () => {
+      printReplacements.forEach(({ input, value }) => {
+        value.remove();
+        input.hidden = false;
+      });
+      printReplacements = [];
+    };
+
+    window.addEventListener('afterprint', restorePrintFields);
 
     const number = (input) => {
       const value = Number.parseFloat(input.value);
