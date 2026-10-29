@@ -678,8 +678,8 @@
     overflow: visible !important;
     background: #fff !important;
     color: #000 !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 
   #kaufplan,
@@ -777,13 +777,17 @@
   #kaufplan .bf-buy-table th,
   #kaufplan .bf-buy-table td {
     display: table-cell !important;
-    height: 14mm !important;
+    height: auto !important;
+    min-height: 14mm !important;
     padding: 2mm !important;
     border: 1px solid #bbb !important;
     background: #fff !important;
     color: #000 !important;
-    vertical-align: middle !important;
+    vertical-align: top !important;
+    white-space: normal !important;
+    overflow: visible !important;
     overflow-wrap: anywhere !important;
+    word-break: normal !important;
   }
 
   #kaufplan .bf-buy-table th {
@@ -821,5 +825,32 @@
   #kaufplan .bf-table-note {
     margin-top: 2mm !important;
     font-size: 7.5pt !important;
+  }
+}
+
+
+/* Print values as wrapping text, rather than single-line form controls. */
+@media print {
+  #kaufplan .bf-buy-table td input[hidden] {
+    display: none !important;
+  }
+
+  #kaufplan .bf-print-value {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 7mm !important;
+    padding: 1mm 0 !important;
+    color: #000 !important;
+    font: inherit !important;
+    line-height: 1.35 !important;
+    white-space: pre-wrap !important;
+    overflow: visible !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  #kaufplan .bf-print-value:empty::after {
+    content: " " !important;
   }
 }
