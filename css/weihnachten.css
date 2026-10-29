@@ -1117,3 +1117,39 @@ body.page-weihnachten .season-hero__image {
     object-fit: cover;
   }
 }
+
+/* Final editorial polish — Christmas hero image */
+body.page-weihnachten .season-hero__art {
+  isolation: isolate;
+  border: 1px solid rgb(32 60 52 / 22%);
+  border-radius: 8px;
+  box-shadow:
+    0 18px 42px rgb(38 33 29 / 10%),
+    0 3px 10px rgb(38 33 29 / 5%);
+  background: var(--winter-green);
+}
+
+body.page-weihnachten .season-hero__art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  border-radius: inherit;
+}
+
+@media (min-width: 761px) {
+  body.page-weihnachten .season-hero__art {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  body.page-weihnachten .season-hero__art {
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgb(38 33 29 / 9%);
+  }
+}
