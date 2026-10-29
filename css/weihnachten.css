@@ -978,9 +978,8 @@ body.page-weihnachten-guide .timeline-item li {
 }
 
 /* =========================================================
-   Weihnachten — Premium Hero Refinement
-   Fix image sizing, mobile typography and visual finish.
-   Scope: Weihnachten landing page only.
+   Weihnachten — Hero refinement (consolidated)
+   One source of truth for the landing-page hero image.
    ========================================================= */
 
 body.page-weihnachten .season-hero__art {
@@ -991,7 +990,7 @@ body.page-weihnachten .season-hero__art {
   min-height: 0;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border: 1px solid rgb(32 60 52 / 12%);
+  border: 1px solid rgb(32 60 52 / 22%);
   border-radius: 8px;
   background: var(--winter-green);
   box-shadow:
@@ -999,7 +998,6 @@ body.page-weihnachten .season-hero__art {
     0 3px 10px rgb(38 33 29 / 5%);
 }
 
-/* Fill the entire frame; eliminate the empty green area. */
 body.page-weihnachten .season-hero__art > img {
   position: absolute;
   inset: 0;
@@ -1012,7 +1010,6 @@ body.page-weihnachten .season-hero__art > img {
   border-radius: inherit;
 }
 
-/* Subtle cinematic depth without obscuring the photograph. */
 body.page-weihnachten .season-hero__art::after {
   position: absolute;
   z-index: 1;
@@ -1023,7 +1020,6 @@ body.page-weihnachten .season-hero__art::after {
   pointer-events: none;
 }
 
-/* More controlled editorial headline wrapping. */
 body.page-weihnachten .season-hero h1 {
   max-width: 12.5ch;
   line-height: 1.08;
@@ -1033,7 +1029,12 @@ body.page-weihnachten .season-hero h1 {
   text-wrap: balance;
 }
 
-/* Keep the hero image elegant and proportional on mobile. */
+@media (min-width: 761px) {
+  body.page-weihnachten .season-hero__art {
+    min-height: 0;
+  }
+}
+
 @media (max-width: 760px) {
   body.page-weihnachten .season-hero {
     padding-block: clamp(2.5rem, 9vw, 4rem);
@@ -1051,9 +1052,11 @@ body.page-weihnachten .season-hero h1 {
   }
 
   body.page-weihnachten .season-hero__art {
+    margin-top: 0.5rem;
     aspect-ratio: 4 / 3;
     min-height: 0;
-    border-radius: 7px;
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgb(38 33 29 / 9%);
   }
 
   body.page-weihnachten .season-hero__art > img {
@@ -1061,95 +1064,12 @@ body.page-weihnachten .season-hero h1 {
   }
 }
 
-/* Respect visitors who prefer reduced motion. */
 @media (prefers-reduced-motion: reduce) {
-  body.page-weihnachten .season-hero__art {
-    scroll-behavior: auto;
-  }
-}
-
-/* =========================================================
-   Weihnachten — Premium Hero Image
-   Fix: remove empty space below the image.
-   Scope: Weihnachten landing page only.
-   ========================================================= */
-
-body.page-weihnachten .season-hero__art {
-  position: relative;
-  isolation: isolate;
-  width: 100%;
-  min-width: 0;
-  min-height: 0;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-
-  border: 1px solid rgb(32 60 52 / 14%);
-  border-radius: 8px;
-  background: var(--winter-green);
-
-  box-shadow:
-    0 18px 42px rgb(38 33 29 / 10%),
-    0 3px 10px rgb(38 33 29 / 5%);
-}
-
-body.page-weihnachten .season-hero__image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-  object-position: center;
-  border-radius: inherit;
-}
-
-/* Mobile: keep the image proportional and avoid empty space. */
-@media (max-width: 760px) {
-  body.page-weihnachten .season-hero__art {
-    width: 100%;
-    min-height: 0;
-    aspect-ratio: 4 / 3;
-    margin-top: 0.5rem;
+  body.page-weihnachten .season-topic {
+    transition: none;
   }
 
-  body.page-weihnachten .season-hero__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-/* Final editorial polish — Christmas hero image */
-body.page-weihnachten .season-hero__art {
-  isolation: isolate;
-  border: 1px solid rgb(32 60 52 / 22%);
-  border-radius: 8px;
-  box-shadow:
-    0 18px 42px rgb(38 33 29 / 10%),
-    0 3px 10px rgb(38 33 29 / 5%);
-  background: var(--winter-green);
-}
-
-body.page-weihnachten .season-hero__art > img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 55%;
-  border-radius: inherit;
-}
-
-@media (min-width: 761px) {
-  body.page-weihnachten .season-hero__art {
-    aspect-ratio: 4 / 3;
-    min-height: 0;
-  }
-}
-
-@media (max-width: 760px) {
-  body.page-weihnachten .season-hero__art {
-    aspect-ratio: 4 / 3;
-    min-height: 0;
-    border-radius: 8px;
-    box-shadow: 0 12px 28px rgb(38 33 29 / 9%);
+  body.page-weihnachten .season-topic:hover {
+    transform: none;
   }
 }
