@@ -1,4 +1,17 @@
 /* SaisonKompass — Black Friday 2026 page. Uses the shared design tokens in styles.css. */
+/* Seasonal palette: late-autumn ivory, espresso and burnt copper. Scoped to this page. */
+body {
+  --color-bg: #F1E8D8;
+  --color-bg-alt: #E5D8C1;
+  --color-ink: #302923;
+  --color-ink-soft: #55483D;
+  --color-accent: #A64B27;
+  --color-accent-dark: #843A1F;
+  --color-violet: #6C5148;
+  --color-line: rgba(48, 41, 35, .17);
+  --color-card-bg: #FAF6EE;
+  --color-on-dark: #F1E8D8;
+}
 .bf-hero { overflow:hidden; border-bottom:1px solid var(--color-line); }
 .bf-hero__grid { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr); gap:clamp(2rem,5vw,5rem); align-items:center; padding-top:clamp(3.5rem,8vw,7rem); padding-bottom:clamp(3.5rem,8vw,7rem); }
 .bf-hero h1 { max-width:13ch; margin-bottom:1.25rem; }
@@ -108,18 +121,21 @@
 .bf-hero__art {
   min-height: 0;
   margin: 0;
-  align-self: stretch;
-  background: #e7dcc3;
-  border: 1px solid rgba(38, 33, 29, .12);
+  align-self: center;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background: #E5D8C1;
+  border: 1px solid rgba(48, 41, 35, .14);
 }
 .bf-hero__art img {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 350px;
-  max-height: 520px;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  object-position: 60% center;
+  object-position: center;
 }
 .bf-hero__art figcaption {
   position: absolute;
@@ -167,7 +183,8 @@
 .bf-print-actions button { cursor: pointer; }
 .bf-print-actions button:focus-visible { outline: 3px solid var(--color-violet); outline-offset: 3px; }
 @media (max-width:760px) {
-  .bf-hero__art img { min-height: 0; height: auto; max-height: none; aspect-ratio: 4 / 3; }
+  .bf-hero__art { aspect-ratio: 4 / 3; }
+  .bf-hero__art img { min-height: 0; height: 100%; max-height: none; aspect-ratio: 4 / 3; }
   .bf-buy-table { min-width: 0; table-layout: auto; }
   .bf-table-wrap { overflow: visible; border: 0; background: transparent; }
   .bf-buy-table, .bf-buy-table tbody { display: block; width: 100%; }
