@@ -210,3 +210,67 @@
   .page-guides-hub .guide-feature-card,
   .page-guides-hub .guide-card { transition: none; }
 }
+/* Brand alignment — Guides hub */
+
+.page-guides-hub {
+  --color-accent: #17212B;
+  --color-accent-dark: #273746;
+
+  --guide-gold: #B69A72;
+}
+
+/* Primary button */
+.page-guides-hub .button--primary {
+  background: #17212B;
+  color: #F5F2EC;
+  border-color: #17212B;
+}
+
+.page-guides-hub .button--primary:hover {
+  background: #273746;
+  border-color: #273746;
+}
+
+/* Section separators */
+.page-guides-hub .section::before {
+  background: #B69A72;
+}
+
+/* Halloween feature image */
+.page-guides-hub .guide-feature-card__visual {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  min-height: 300px;
+  background: #17212B;
+}
+
+.page-guides-hub .guide-feature-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page-guides-hub .guide-card-index {
+  position: absolute;
+  z-index: 1;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: .55rem .75rem;
+  color: #F5F2EC;
+  background: rgba(23, 33, 43, .78);
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .page-guides-hub .guide-feature-card__visual {
+    min-height: 190px;
+  }
+
+  .page-guides-hub .guide-feature-card__image {
+    min-height: 190px;
+  }
+}
