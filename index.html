@@ -3,157 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SaisonKompass – Saisonale Ideen, Guides und passende Lösungen</title>
-  <meta name="description" content="Entdecke saisonale Ideen, praktische Guides und passende Lösungen für Halloween, Weihnachten, Black Friday und weitere Anlässe – mit SaisonKompass.">
+  <title>SaisonKompass – Ideen, Orientierung &amp; saisonale Erlebnisse</title>
+  <meta name="description" content="Entdecke saisonale Ideen, finde Orientierung und passende Lösungen für Feste, Events und besondere Momente im Jahr.">
   <link rel="canonical" href="https://saisonkompass.de/">
   <meta name="google-site-verification" content="rUMN4Gb7hiZptuFKCtSyKxQEfc8dC3cP64Ww7afRiIE">
-  <meta property="og:title" content="SaisonKompass – Saisonale Ideen, Guides und passende Lösungen">
-  <meta property="og:description" content="Ideen entdecken, besser entscheiden und passende Lösungen für saisonale Anlässe finden.">
+  <meta property="og:title" content="SaisonKompass – Ideen, Orientierung &amp; saisonale Erlebnisse">
+  <meta property="og:description" content="Entdecke saisonale Ideen und finde passende Lösungen für die besonderen Momente im Jahr.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saisonkompass.de/">
   <meta property="og:site_name" content="SaisonKompass">
   <meta property="og:locale" content="de_DE">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/homepage.css">
 </head>
-<body class="home-page">
+
+<body class="page-home">
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
-<header class="site-header">
-  <div class="wrap site-header__inner">
-    <a class="brand" href="/" aria-label="SaisonKompass – Startseite">
-      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2" />
-  <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#C1531B" />
-  <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#5B4B6E" />
-  <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#E7DCC3" />
-  <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#C1531B" />
-  <circle cx="32" cy="32" r="2.8" fill="#26211D" />
-</svg>
-      <span class="brand__word">SaisonKompass</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
-      <span class="nav-toggle__bar" aria-hidden="true"></span>
-      <span class="visually-hidden" id="navToggleLabel">Menü öffnen</span>
-    </button>
-    <nav class="site-nav" id="primaryNav" aria-label="Hauptnavigation">
-      <ul>
-        <li><a href="/halloween/">Halloween</a></li>
-        <li><a href="/weihnachten/">Weihnachten</a></li>
-        <li><a href="/black-friday/">Black Friday</a></li>
-        <li><a href="/guides/">Guides</a></li>
-        <li><a href="/ueber-uns/">Über uns</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="/" aria-label="SaisonKompass – Startseite">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#B69A72"/>
+          <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#17212B"/>
+          <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#DCD6CC"/>
+          <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#B69A72"/>
+          <circle cx="32" cy="32" r="2.8" fill="#17212B"/>
+        </svg>
+        <span class="brand__word">SaisonKompass</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="visually-hidden" id="navToggleLabel">Menü öffnen</span>
+      </button>
+
+      <nav class="site-nav" id="primaryNav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="/" aria-current="page">Start</a></li>
+          <li><a href="#saisons">Saisons</a></li>
+          <li><a href="/ueber-uns/">Über uns</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main id="main">
     <section class="home-hero" aria-labelledby="home-title">
       <div class="wrap home-hero__inner">
         <div class="home-hero__copy">
-          <p class="home-kicker">SAISONS. IDEEN. ORIENTIERUNG.</p>
-          <h1 id="home-title">Finde, was zu deiner Saison passt.</h1>
-          <p class="home-hero__lead">Ideen entdecken. Besser entscheiden. Passende Lösungen finden – für Feste, Events und die besonderen Momente im Jahr.</p>
-          <div class="hero__actions home-hero__actions">
-            <a class="button home-button-primary" href="#saisons">Saison entdecken</a>
-            <a class="button home-button-secondary" href="#so-funktionierts">SaisonKompass kennenlernen</a>
-          </div>
+          <p class="home-kicker">Saisons. Ideen. Orientierung.</p>
+          <h1 id="home-title">Jede Saison beginnt mit einer Idee.</h1>
+          <p class="home-hero__lead">Entdecke saisonale Ideen, finde Orientierung und passende Lösungen für die besonderen Momente im Jahr.</p>
+          <a class="home-button home-button--primary" href="#saisons">Saisons entdecken <span aria-hidden="true">↗</span></a>
         </div>
         <div class="home-hero__visual" aria-hidden="true">
           <div class="home-orbit home-orbit--outer"></div>
           <div class="home-orbit home-orbit--inner"></div>
           <div class="home-compass">
-            <span class="home-compass__north">N</span>
-            <span class="home-compass__needle home-compass__needle--north"></span>
-            <span class="home-compass__needle home-compass__needle--south"></span>
+            <span class="home-compass__north"></span>
+            <span class="home-compass__south"></span>
+            <span class="home-compass__east"></span>
+            <span class="home-compass__west"></span>
             <span class="home-compass__center"></span>
           </div>
-          <span class="home-orbit-label home-orbit-label--one">Ideen</span>
-          <span class="home-orbit-label home-orbit-label--two">Planen</span>
-          <span class="home-orbit-label home-orbit-label--three">Entdecken</span>
+          <span class="home-visual-note">Ideen für das ganze Jahr</span>
         </div>
       </div>
-      <div class="home-hero__footnote"><span></span> Ein klarer Weg durch saisonale Möglichkeiten</div>
+      <div class="home-hero__bottom" aria-hidden="true"><span>01</span><span></span><span>ENTDECKEN</span></div>
     </section>
 
-    <section class="section home-seasons" id="saisons" aria-labelledby="seasons-title">
+    <section class="home-seasons section" id="saisons" aria-labelledby="seasons-title">
       <div class="wrap">
         <div class="home-section-heading">
-          <p class="eyebrow">Jetzt entdecken</p>
-          <h2 id="seasons-title">Welche Saison steht bei dir an?</h2>
-          <p>Starte mit dem Anlass, der dich gerade beschäftigt. Jede Saison bietet einen eigenen Überblick und passende nächste Schritte.</p>
+          <div>
+            <p class="home-kicker">Im Jahresverlauf</p>
+            <h2 id="seasons-title">Was steht als Nächstes an?</h2>
+          </div>
+          <p>Jede Jahreszeit bringt neue Anlässe und Entscheidungen mit sich. Finde den passenden Einstieg und entdecke, was für deine Planung wichtig ist.</p>
         </div>
+
         <div class="home-season-grid">
-          <a class="home-season-card home-season-card--halloween" href="/halloween/">
-            <img src="/images/halloween-hero-1.webp" alt="Herbstliche Halloween-Dekoration mit Kürbissen und Laternen" width="1200" height="800" loading="lazy">
-            <span class="home-season-card__body"><span class="home-season-card__eyebrow">Herbst · 31. Oktober 2026</span><span class="home-season-card__title">Halloween</span><span class="home-season-card__description">Party, Kostüm, Deko und Erlebnisse passend planen.</span><span class="home-season-card__link">Halloween entdecken <span aria-hidden="true">↗</span></span></span>
-          </a>
-          <a class="home-season-card home-season-card--christmas" href="/weihnachten/">
-            <img src="/images/weihnachten-hero.webp" alt="Stimmungsvolle Weihnachtsdekoration mit Tannengrün" width="1536" height="1024" loading="lazy">
-            <span class="home-season-card__body"><span class="home-season-card__eyebrow">Winter · Weihnachten 2026</span><span class="home-season-card__title">Weihnachten</span><span class="home-season-card__description">Vorbereitung strukturieren, Prioritäten setzen und Ideen finden.</span><span class="home-season-card__link">Weihnachten entdecken <span aria-hidden="true">↗</span></span></span>
-          </a>
-          <a class="home-season-card home-season-card--blackfriday" href="/black-friday/">
-            <img src="/images/black-friday-hero.webp" alt="Schlicht arrangierte Geschenkbox und Notizbuch für die Einkaufsplanung" width="1536" height="1024" loading="lazy">
-            <span class="home-season-card__body"><span class="home-season-card__eyebrow">November · 27. November 2026</span><span class="home-season-card__title">Black Friday</span><span class="home-season-card__description">Bedarf klären, Wunschpreise setzen und Angebote prüfen.</span><span class="home-season-card__link">Black Friday entdecken <span aria-hidden="true">↗</span></span></span>
-          </a>
+          <article class="home-season-card home-season-card--halloween">
+            <div class="home-season-card__top"><span>HERBST · 2026</span><span>01</span></div>
+            <div class="home-season-card__body">
+              <p class="home-season-card__overline">31. Oktober 2026</p>
+              <h3>Halloween</h3>
+              <p>Ideen, Planung und Inspiration für Halloween – von der passenden Dekoration bis zum besonderen Erlebnis.</p>
+              <a href="/halloween/" class="home-text-link">Halloween entdecken <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="home-season-card__symbol" aria-hidden="true">✳</span>
+          </article>
+          <article class="home-season-card home-season-card--blackfriday">
+            <div class="home-season-card__top"><span>NOVEMBER · 2026</span><span>03</span></div>
+            <div class="home-season-card__body">
+              <p class="home-season-card__overline">27. November 2026</p>
+              <h3>Black Friday</h3>
+              <p>Finde Orientierung rund um Angebote und Kaufentscheidungen. Entdecke, worauf es beim Vergleichen und Auswählen ankommt.</p>
+              <a href="/black-friday/" class="home-text-link">Black Friday entdecken <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="home-season-card__symbol" aria-hidden="true">◈</span>
+          </article>
+          <article class="home-season-card home-season-card--christmas">
+            <div class="home-season-card__top"><span>WINTER · 2026</span><span>02</span></div>
+            <div class="home-season-card__body">
+              <p class="home-season-card__overline">Dezember 2026</p>
+              <h3>Weihnachten</h3>
+              <p>Entdecke Ideen für eine bewusste Weihnachtszeit – von der Planung bis zu Geschenken und besonderen Momenten.</p>
+              <a href="/weihnachten/" class="home-text-link">Weihnachten entdecken <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="home-season-card__symbol" aria-hidden="true">✧</span>
+          </article>
+
+          <article class="home-season-card home-season-card--christmas">
+            <div class="home-season-card__top"><span>WINTER · 2026</span><span>02</span></div>
+            <div class="home-season-card__body">
+              <p class="home-season-card__overline">Dezember 2026</p>
+              <h3>Weihnachten</h3>
+              <p>Entdecke Ideen für eine bewusste Weihnachtszeit – von der Planung bis zu Geschenken und besonderen Momenten.</p>
+              <a href="/weihnachten/" class="home-text-link">Weihnachten entdecken <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="home-season-card__symbol" aria-hidden="true">✧</span>
+          </article>
+
+          <article class="home-season-card home-season-card--blackfriday">
+            <div class="home-season-card__top"><span>NOVEMBER · 2026</span><span>03</span></div>
+            <div class="home-season-card__body">
+              <p class="home-season-card__overline">27. November 2026</p>
+              <h3>Black Friday</h3>
+              <p>Finde Orientierung rund um Angebote und Kaufentscheidungen. Entdecke, worauf es beim Vergleichen und Auswählen ankommt.</p>
+              <a href="/black-friday/" class="home-text-link">Black Friday entdecken <span aria-hidden="true">→</span></a>
+            </div>
+            <span class="home-season-card__symbol" aria-hidden="true">◈</span>
+          </article>
         </div>
-        <p class="home-seasons-note">Weitere saisonale Anlässe ergänzen wir, sobald hilfreiche Inhalte dafür bereitstehen.</p>
       </div>
     </section>
 
-    <section class="section section--alt home-how" id="so-funktionierts" aria-labelledby="how-title">
-      <div class="wrap">
-        <div class="home-section-heading">
-          <p class="eyebrow">So hilft dir SaisonKompass</p>
-          <h2 id="how-title">Weniger suchen. Besser entscheiden.</h2>
-          <p>Du musst nicht alles auf einmal planen. Finde zuerst heraus, was du brauchst – und gehe dann gezielt den nächsten Schritt.</p>
+    <section class="home-orientation section" aria-labelledby="orientation-title">
+      <div class="wrap home-orientation__inner">
+        <div class="home-orientation__intro">
+          <p class="home-kicker">Dein nächster Schritt</p>
+          <h2 id="orientation-title">Was möchtest du finden?</h2>
+          <p>Ob du erst Ideen sammelst oder schon etwas Konkretes suchst: Beginne mit dem, was dich gerade weiterbringt.</p>
         </div>
-        <div class="home-value-grid">
-          <article class="home-value-item"><span class="home-value-item__number">01</span><h3>Orientierung gewinnen</h3><p>Verschaffe dir einen Überblick über den Anlass und die Möglichkeiten, die wirklich zu deinen Plänen passen.</p></article>
-          <article class="home-value-item"><span class="home-value-item__number">02</span><h3>Gezielt auswählen</h3><p>Nutze praktische Guides und Entscheidungshilfen, statt dich durch endlose, unübersichtliche Listen zu arbeiten.</p></article>
-          <article class="home-value-item"><span class="home-value-item__number">03</span><h3>Passende Lösungen finden</h3><p>Gehe von deiner konkreten Frage zu relevanten Ideen, Produkten, Erlebnissen oder Services.</p></article>
+        <div class="home-orientation__list">
+          <a href="/halloween/" class="home-orientation-item"><span>01</span><strong>Ideen entdecken</strong><span aria-hidden="true">↗</span></a>
+          <a href="/guides/halloween-party-planen/" class="home-orientation-item"><span>02</span><strong>Etwas planen</strong><span aria-hidden="true">↗</span></a>
+          <a href="/guides/halloween-kostuem-finden/" class="home-orientation-item"><span>03</span><strong>Das Richtige auswählen</strong><span aria-hidden="true">↗</span></a>
+          <a href="/halloween/#erlebnisse" class="home-orientation-item"><span>04</span><strong>Erlebnisse entdecken</strong><span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="home-guides section" aria-labelledby="guides-title">
-      <div class="wrap home-guides__inner">
-        <div><p class="eyebrow">Praktisch statt beliebig</p><h2 id="guides-title">Du suchst einen klaren nächsten Schritt?</h2><p>Unsere Guides helfen dir, eine konkrete saisonale Aufgabe strukturiert anzugehen – von der ersten Idee bis zur Entscheidung.</p></div>
-        <a class="button home-button-secondary" href="/guides/">Guides entdecken</a>
+    <section class="home-manifesto section" aria-labelledby="manifesto-title">
+      <div class="wrap home-manifesto__inner">
+        <p class="home-kicker">Der Gedanke dahinter</p>
+        <h2 id="manifesto-title">Mehr als nur saisonale Inspiration.</h2>
+        <p class="home-manifesto__text">SaisonKompass verbindet saisonale Ideen mit praktischer Orientierung. Wir zeigen Möglichkeiten, helfen bei Entscheidungen und führen zu passenden Lösungen. Unser Ziel ist nicht, möglichst viele Ideen zu sammeln, sondern dir dabei zu helfen, die richtigen für deinen Anlass zu finden.</p>
+        <span class="home-manifesto__signature">Saisons. Ideen. Orientierung.</span>
+      </div>
+    </section>
+
+    <section class="home-outlook section" aria-labelledby="outlook-title">
+      <div class="wrap home-outlook__inner">
+        <div>
+          <p class="home-kicker">Ein Jahr voller Möglichkeiten</p>
+          <h2 id="outlook-title">Die nächste Saison kommt.</h2>
+          <p>Neue Anlässe bringen neue Ideen und Möglichkeiten. Entdecke, was bevorsteht, und lass dich rechtzeitig inspirieren.</p>
+        </div>
+        <a class="home-button home-button--light" href="#saisons">Alle Saisons entdecken <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-  <div class="wrap site-footer__inner">
-    <div class="site-footer__brand">
+
+  <footer class="site-footer home-footer">
+    <div class="wrap site-footer__inner">
       <a class="brand brand--footer" href="/" aria-label="SaisonKompass – Startseite">
         <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-  <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2" />
-  <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#C1531B" />
-  <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#5B4B6E" />
-  <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#E7DCC3" />
-  <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#C1531B" />
-  <circle cx="32" cy="32" r="2.8" fill="#26211D" />
-</svg>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#B69A72"/>
+          <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#17212B"/>
+          <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#DCD6CC"/>
+          <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#B69A72"/>
+          <circle cx="32" cy="32" r="2.8" fill="#17212B"/>
+        </svg>
         <span class="brand__word">SaisonKompass</span>
       </a>
       <p class="site-footer__tagline">Dein Guide für Feste, Events &amp; saisonale Erlebnisse.</p>
-      <p>Ideen entdecken. Entscheidungen vereinfachen. Passende Lösungen finden.</p>
+      <nav aria-label="Rechtliches">
+        <ul class="footer-nav">
+          <li><a href="/ueber-uns/">Über uns</a></li>
+          <li><a href="/affiliate-hinweis/">Affiliate-Hinweis</a></li>
+          <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/datenschutz/">Datenschutz</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy">© <span id="year"></span> SaisonKompass</p>
     </div>
-    <nav aria-label="Rechtliches und weitere Informationen">
-      <ul class="footer-nav">
-        <li><a href="/ueber-uns/">Über uns</a></li>
-        <li><a href="/guides/">Guides</a></li>
-        <li><a href="/affiliate-hinweis/">Affiliate-Hinweis</a></li>
-        <li><a href="/impressum/">Impressum</a></li>
-        <li><a href="/datenschutz/">Datenschutz</a></li>
-      </ul>
-    </nav>
-    <p class="site-footer__copy">© <span id="year"></span> SaisonKompass</p>
-  </div>
-</footer>
-<script src="/js/main.js" defer></script>
+  </footer>
+
+  <script src="/js/main.js"></script>
 </body>
 </html>
