@@ -864,11 +864,22 @@ ul.quick-overview li::marker {
   }
 
   .brand {
-    min-width: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.05rem;
-  }
+  min-width: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brand__mark {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.brand__word {
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
 
   .brand__word {
     white-space: nowrap;
@@ -1166,4 +1177,69 @@ a.intent-card,
   width: 1.25rem;
   height: 1.25rem;
   flex: 0 0 1.25rem;
+}
+.site-logo,
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-logo img,
+.footer-brand img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.site-logo span,
+.footer-brand span {
+  color: inherit;
+}
+/* Footer brand — mobile and desktop */
+
+.site-footer__brand .brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.site-footer__brand .brand__mark {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.site-footer__brand .brand__word {
+  font-size: 1.5rem;
+}
+
+/* Legal and brand-information pages: align with the homepage identity.
+   Scoped to these four pages; seasonal pages and the homepage remain unchanged. */
+body.page-legal {
+  --color-bg: #EEEAE2;
+  --color-bg-alt: #D8D1C6;
+  --color-ink: #17212B;
+  --color-ink-soft: #59616A;
+  --color-accent: #17212B;
+  --color-accent-dark: #273746;
+  --color-violet: #343A40;
+  --color-line: rgba(23, 33, 43, .16);
+  --color-card-bg: #FFFFFF;
+  --color-on-dark: #EEEAE2;
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+body.page-legal :focus-visible {
+  outline-color: #A88B63;
 }
