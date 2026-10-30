@@ -209,3 +209,21 @@ body.page-home .home-season-card:focus-within { outline: 2px solid var(--season-
   body.page-home .home-visual-note { right: 0; }
   body.page-home .home-season-card { padding: 1.25rem; }
 }
+
+/* SaisonKompass compass mark: preserve the original compass geometry at every viewport. */
+body.page-home .home-season-symbol {
+  width: min(100%, 420px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  overflow: visible;
+}
+body.page-home .brand__mark {
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  display: block;
+}
+body.page-home .home-orientation-item strong {
+  overflow-wrap: anywhere;
+}
