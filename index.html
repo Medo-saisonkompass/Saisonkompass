@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg?v=2">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/homepage.css">
 </head>
@@ -29,12 +29,13 @@
     <div class="wrap site-header__inner">
       <a class="brand" href="/" aria-label="SaisonKompass – Startseite">
         <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M32 8 C39 18 42 25 32 32 C22 25 25 18 32 8Z" fill="#A88B63"/>
-          <path d="M56 32 C46 39 39 42 32 32 C39 22 46 25 56 32Z" fill="#29483D"/>
-          <path d="M32 56 C25 46 22 39 32 32 C42 39 39 46 32 56Z" fill="#713D32"/>
-          <path d="M8 32 C18 25 25 22 32 32 C25 42 18 39 8 32Z" fill="#68727A"/>
-          <circle cx="32" cy="32" r="4" fill="#EEEAE2" stroke="currentColor" stroke-width="1"/>
+          <path d="M32 4 38 26 60 32 38 38 32 60 26 38 4 32 26 26Z" fill="#17212B"/>
+          <path d="M32 4 32 32 26 26Z" fill="#A88B63"/>
+          <path d="M32 32 60 32 38 38Z" fill="#756044"/>
+          <path d="M32 32 32 60 38 38Z" fill="#68727A"/>
+          <path d="M32 32 4 32 26 26Z" fill="#D4C9B7"/>
+          <circle cx="32" cy="32" r="27" fill="none" stroke="#A88B63" stroke-width="2.5" stroke-dasharray="77 9 77 9" transform="rotate(-45 32 32)"/>
+          <circle cx="32" cy="32" r="2.5" fill="#17212B"/>
         </svg>
         <span class="brand__word">SaisonKompass</span>
       </a>
@@ -64,15 +65,14 @@
           <a class="home-button home-button--primary" href="#saisons">Saisons entdecken <span aria-hidden="true">↗</span></a>
         </div>
         <div class="home-hero__visual" aria-hidden="true">
-          <svg class="home-season-symbol" viewBox="0 0 360 360" role="img" aria-label="Symbol für den Wechsel der vier Jahreszeiten" focusable="false">
-            <circle cx="180" cy="180" r="151" fill="none" stroke="#A88B63" stroke-opacity=".62" stroke-width="1.5"/>
-            <circle cx="180" cy="180" r="112" fill="none" stroke="#17212B" stroke-opacity=".16" stroke-width="1.2"/>
-            <path d="M180 57 C219 80 239 119 180 169 C121 119 141 80 180 57Z" fill="#A88B63"/>
-            <path d="M303 180 C280 219 241 239 191 180 C241 121 280 141 303 180Z" fill="#29483D"/>
-            <path d="M180 303 C141 280 121 241 180 191 C239 241 219 280 180 303Z" fill="#713D32"/>
-            <path d="M57 180 C80 141 119 121 169 180 C119 239 80 219 57 180Z" fill="#68727A"/>
-            <circle cx="180" cy="180" r="17" fill="#EEEAE2" stroke="#A88B63" stroke-width="2"/>
-            <circle cx="180" cy="180" r="5" fill="#17212B"/>
+          <svg class="home-season-symbol" viewBox="0 0 64 64" role="img" aria-label="SaisonKompass-Kompasssymbol" focusable="false">
+            <path d="M32 4 38 26 60 32 38 38 32 60 26 38 4 32 26 26Z" fill="#17212B"/>
+            <path d="M32 4 32 32 26 26Z" fill="#A88B63"/>
+            <path d="M32 32 60 32 38 38Z" fill="#756044"/>
+            <path d="M32 32 32 60 38 38Z" fill="#68727A"/>
+            <path d="M32 32 4 32 26 26Z" fill="#D4C9B7"/>
+            <circle cx="32" cy="32" r="27" fill="none" stroke="#A88B63" stroke-width="1.4" stroke-dasharray="77 9 77 9" transform="rotate(-45 32 32)"/>
+            <circle cx="32" cy="32" r="2.5" fill="#17212B"/>
           </svg>
           <span class="home-visual-note">Ideen für das ganze Jahr</span>
         </div>
@@ -132,14 +132,14 @@
         <div class="home-orientation__intro">
           <p class="home-kicker">Dein Einstieg</p>
           <h2 id="orientation-title">Wobei brauchst du Orientierung?</h2>
-          <p>Ob du Ideen suchst, etwas planst oder eine Entscheidung treffen möchtest: Wähle deinen Einstieg und entdecke die Inhalte, die zum saisonalen Anlass passen.</p>
+          <p>Wähle, wobei du Unterstützung brauchst. Wir führen dich zu den passenden Ideen, Planungsgrundlagen und Entscheidungshilfen für den aktuellen saisonalen Anlass.</p>
           <p class="home-current-focus" id="currentSeasonNote" aria-live="polite">Aktuelle Inhalte: saisonale Ideen und praktische Orientierung</p>
         </div>
-        <div class="home-orientation__list">
-          <a href="/halloween/" class="home-orientation-item" data-intent="ideas"><span>01</span><strong>Ideen entdecken</strong><span aria-hidden="true">↗</span></a>
-          <a href="/guides/halloween-party-planen/" class="home-orientation-item" data-intent="planning"><span>02</span><strong>Etwas planen</strong><span aria-hidden="true">↗</span></a>
-          <a href="/guides/halloween-kostuem-finden/" class="home-orientation-item" data-intent="choosing"><span>03</span><strong>Das Richtige auswählen</strong><span aria-hidden="true">↗</span></a>
-          <a href="/halloween/#erlebnisse" class="home-orientation-item" data-intent="experiences"><span>04</span><strong>Erlebnisse entdecken</strong><span aria-hidden="true">↗</span></a>
+        <div class="home-orientation__list" id="orientationList" aria-live="polite" aria-relevant="additions text">
+          <a href="/halloween/" class="home-orientation-item" data-intent="ideas"><span>01</span><strong>Halloween-Ideen entdecken</strong><span aria-hidden="true">↗</span></a>
+          <a href="/guides/halloween-party-planen/" class="home-orientation-item" data-intent="planning"><span>02</span><strong>Halloween-Party planen</strong><span aria-hidden="true">↗</span></a>
+          <a href="/guides/halloween-kostuem-finden/" class="home-orientation-item" data-intent="choosing"><span>03</span><strong>Das passende Halloween-Kostüm finden</strong><span aria-hidden="true">↗</span></a>
+          <a href="/halloween/" class="home-orientation-item" data-intent="experiences"><span>04</span><strong>Halloween-Erlebnisse entdecken</strong><span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
