@@ -29,12 +29,12 @@
     <div class="wrap site-header__inner">
       <a class="brand" href="/" aria-label="SaisonKompass – Startseite">
         <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2"/>
-          <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#B69A72"/>
-          <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#17212B"/>
-          <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#DCD6CC"/>
-          <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#B69A72"/>
-          <circle cx="32" cy="32" r="2.8" fill="#17212B"/>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M32 8 C39 18 42 25 32 32 C22 25 25 18 32 8Z" fill="#A88B63"/>
+          <path d="M56 32 C46 39 39 42 32 32 C39 22 46 25 56 32Z" fill="#29483D"/>
+          <path d="M32 56 C25 46 22 39 32 32 C42 39 39 46 32 56Z" fill="#713D32"/>
+          <path d="M8 32 C18 25 25 22 32 32 C25 42 18 39 8 32Z" fill="#68727A"/>
+          <circle cx="32" cy="32" r="4" fill="#EEEAE2" stroke="currentColor" stroke-width="1"/>
         </svg>
         <span class="brand__word">SaisonKompass</span>
       </a>
@@ -64,15 +64,16 @@
           <a class="home-button home-button--primary" href="#saisons">Saisons entdecken <span aria-hidden="true">↗</span></a>
         </div>
         <div class="home-hero__visual" aria-hidden="true">
-          <div class="home-orbit home-orbit--outer"></div>
-          <div class="home-orbit home-orbit--inner"></div>
-          <div class="home-compass">
-            <span class="home-compass__north"></span>
-            <span class="home-compass__south"></span>
-            <span class="home-compass__east"></span>
-            <span class="home-compass__west"></span>
-            <span class="home-compass__center"></span>
-          </div>
+          <svg class="home-season-symbol" viewBox="0 0 360 360" role="img" aria-label="Symbol für den Wechsel der vier Jahreszeiten" focusable="false">
+            <circle cx="180" cy="180" r="151" fill="none" stroke="#A88B63" stroke-opacity=".62" stroke-width="1.5"/>
+            <circle cx="180" cy="180" r="112" fill="none" stroke="#17212B" stroke-opacity=".16" stroke-width="1.2"/>
+            <path d="M180 57 C219 80 239 119 180 169 C121 119 141 80 180 57Z" fill="#A88B63"/>
+            <path d="M303 180 C280 219 241 239 191 180 C241 121 280 141 303 180Z" fill="#29483D"/>
+            <path d="M180 303 C141 280 121 241 180 191 C239 241 219 280 180 303Z" fill="#713D32"/>
+            <path d="M57 180 C80 141 119 121 169 180 C119 239 80 219 57 180Z" fill="#68727A"/>
+            <circle cx="180" cy="180" r="17" fill="#EEEAE2" stroke="#A88B63" stroke-width="2"/>
+            <circle cx="180" cy="180" r="5" fill="#17212B"/>
+          </svg>
           <span class="home-visual-note">Ideen für das ganze Jahr</span>
         </div>
       </div>
@@ -86,14 +87,14 @@
             <p class="home-kicker">Im Jahresverlauf</p>
             <h2 id="seasons-title">Was steht als Nächstes an?</h2>
           </div>
-          <p>Von Halloween bis Weihnachten: Entdecke die nächsten Anlässe, bereite dich rechtzeitig vor und finde hilfreiche Orientierung für jede Saison.</p>
+          <p>Entdecke kommende Anlässe, behalte wichtige Termine im Blick und finde rechtzeitig den passenden Einstieg – von der ersten Idee bis zur konkreten Entscheidung.</p>
         </div>
 
-        <div class="home-season-grid">
-          <article class="home-season-card home-season-card--halloween">
-            <div class="home-season-card__top"><span>HERBST · 2026</span><span>01</span></div>
+        <div class="home-season-grid" id="seasonGrid" aria-live="polite" aria-relevant="additions text">
+          <article class="home-season-card home-season-card--halloween" data-season="halloween">
+            <div class="home-season-card__top"><span data-season-status>IM JAHRESVERLAUF</span><span data-season-number>01</span></div>
             <div class="home-season-card__body">
-              <p class="home-season-card__overline">31. Oktober 2026</p>
+              <p class="home-season-card__overline" data-season-date>31. Oktober 2026</p>
               <h3>Halloween</h3>
               <p>Ideen, Planung und Inspiration für Halloween – von der passenden Dekoration bis zum besonderen Erlebnis.</p>
               <a href="/halloween/" class="home-text-link">Halloween entdecken <span aria-hidden="true">→</span></a>
@@ -101,10 +102,10 @@
             <span class="home-season-card__symbol" aria-hidden="true">✳</span>
           </article>
 
-          <article class="home-season-card home-season-card--blackfriday">
-            <div class="home-season-card__top"><span>NOVEMBER · 2026</span><span>02</span></div>
+          <article class="home-season-card home-season-card--blackfriday" data-season="blackfriday">
+            <div class="home-season-card__top"><span data-season-status>IM JAHRESVERLAUF</span><span data-season-number>02</span></div>
             <div class="home-season-card__body">
-              <p class="home-season-card__overline">27. November 2026</p>
+              <p class="home-season-card__overline" data-season-date>27. November 2026</p>
               <h3>Black Friday</h3>
               <p>Finde Orientierung rund um Angebote und Kaufentscheidungen. Entdecke, worauf es beim Vergleichen und Auswählen ankommt.</p>
               <a href="/black-friday/" class="home-text-link">Black Friday entdecken <span aria-hidden="true">→</span></a>
@@ -112,10 +113,10 @@
             <span class="home-season-card__symbol" aria-hidden="true">◈</span>
           </article>
 
-          <article class="home-season-card home-season-card--christmas">
-            <div class="home-season-card__top"><span>WINTER · 2026</span><span>03</span></div>
+          <article class="home-season-card home-season-card--christmas" data-season="christmas">
+            <div class="home-season-card__top"><span data-season-status>IM JAHRESVERLAUF</span><span data-season-number>03</span></div>
             <div class="home-season-card__body">
-              <p class="home-season-card__overline">Dezember 2026</p>
+              <p class="home-season-card__overline" data-season-date>24. Dezember 2026</p>
               <h3>Weihnachten</h3>
               <p>Entdecke Ideen für eine bewusste Weihnachtszeit – von der Planung bis zu Geschenken und besonderen Momenten.</p>
               <a href="/weihnachten/" class="home-text-link">Weihnachten entdecken <span aria-hidden="true">→</span></a>
@@ -129,15 +130,16 @@
     <section class="home-orientation section" aria-labelledby="orientation-title">
       <div class="wrap home-orientation__inner">
         <div class="home-orientation__intro">
-          <p class="home-kicker">Aktuell im Fokus · Halloween</p>
-          <h2 id="orientation-title">Was möchtest du vorbereiten?</h2>
-          <p>Du planst Halloween? Hier findest du konkrete Einstiege – von der Partyplanung über Kostümideen bis zu Erlebnissen.</p>
+          <p class="home-kicker">Dein Einstieg</p>
+          <h2 id="orientation-title">Wobei brauchst du Orientierung?</h2>
+          <p>Ob du Ideen suchst, etwas planst oder eine Entscheidung treffen möchtest: Wähle deinen Einstieg und entdecke die Inhalte, die zum saisonalen Anlass passen.</p>
+          <p class="home-current-focus" id="currentSeasonNote" aria-live="polite">Aktuelle Inhalte: saisonale Ideen und praktische Orientierung</p>
         </div>
         <div class="home-orientation__list">
-          <a href="/halloween/" class="home-orientation-item"><span>01</span><strong>Ideen für Halloween entdecken</strong><span aria-hidden="true">↗</span></a>
-          <a href="/guides/halloween-party-planen/" class="home-orientation-item"><span>02</span><strong>Halloween-Party planen</strong><span aria-hidden="true">↗</span></a>
-          <a href="/guides/halloween-kostuem-finden/" class="home-orientation-item"><span>03</span><strong>Das passende Kostüm finden</strong><span aria-hidden="true">↗</span></a>
-          <a href="/halloween/#erlebnisse" class="home-orientation-item"><span>04</span><strong>Halloween-Erlebnisse entdecken</strong><span aria-hidden="true">↗</span></a>
+          <a href="/halloween/" class="home-orientation-item" data-intent="ideas"><span>01</span><strong>Ideen entdecken</strong><span aria-hidden="true">↗</span></a>
+          <a href="/guides/halloween-party-planen/" class="home-orientation-item" data-intent="planning"><span>02</span><strong>Etwas planen</strong><span aria-hidden="true">↗</span></a>
+          <a href="/guides/halloween-kostuem-finden/" class="home-orientation-item" data-intent="choosing"><span>03</span><strong>Das Richtige auswählen</strong><span aria-hidden="true">↗</span></a>
+          <a href="/halloween/#erlebnisse" class="home-orientation-item" data-intent="experiences"><span>04</span><strong>Erlebnisse entdecken</strong><span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
@@ -167,12 +169,12 @@
     <div class="wrap site-footer__inner">
       <a class="brand brand--footer" href="/" aria-label="SaisonKompass – Startseite">
         <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="2.2"/>
-          <path d="M32 7 L39 27 L32 32 L25 27 Z" fill="#B69A72"/>
-          <path d="M32 57 L25 37 L32 32 L39 37 Z" fill="#17212B"/>
-          <path d="M7 32 L27 25 L32 32 L27 39 Z" fill="#DCD6CC"/>
-          <path d="M57 32 L37 39 L32 32 L37 25 Z" fill="#B69A72"/>
-          <circle cx="32" cy="32" r="2.8" fill="#17212B"/>
+          <circle cx="32" cy="32" r="28" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M32 8 C39 18 42 25 32 32 C22 25 25 18 32 8Z" fill="#A88B63"/>
+          <path d="M56 32 C46 39 39 42 32 32 C39 22 46 25 56 32Z" fill="#29483D"/>
+          <path d="M32 56 C25 46 22 39 32 32 C42 39 39 46 32 56Z" fill="#713D32"/>
+          <path d="M8 32 C18 25 25 22 32 32 C25 42 18 39 8 32Z" fill="#68727A"/>
+          <circle cx="32" cy="32" r="4" fill="#EEEAE2" stroke="currentColor" stroke-width="1"/>
         </svg>
         <span class="brand__word">SaisonKompass</span>
       </a>
@@ -219,5 +221,6 @@
   </footer>
 
   <script src="/js/main.js"></script>
+  <script src="/js/homepage.js" defer></script>
 </body>
 </html>
