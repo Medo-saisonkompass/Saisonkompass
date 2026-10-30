@@ -1167,3 +1167,29 @@ a.intent-card,
   height: 1.25rem;
   flex: 0 0 1.25rem;
 }
+.site-logo,
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.site-logo img,
+.footer-brand img {
+  display: block;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.footer-brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.site-logo span,
+.footer-brand span {
+  color: inherit;
+}
