@@ -96,34 +96,18 @@ body.page-home .home-hero__visual {
   display: grid;
   place-items: center;
   width: min(100%, 490px);
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
   justify-self: end;
-  color: var(--home-midnight);
+  min-width: 0;
 }
-body.page-home .home-orbit { position: absolute; border: 1px solid rgba(182,154,114,.65); border-radius: 50%; }
-body.page-home .home-orbit--outer { inset: 3%; }
-body.page-home .home-orbit--inner { inset: 17%; border-color: rgba(23,33,43,.2); }
-body.page-home .home-compass {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 54%;
-  aspect-ratio: 1;
-  transform: rotate(12deg);
+body.page-home .home-season-symbol {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: visible;
 }
-body.page-home .home-compass::before,
-body.page-home .home-compass::after { content: ""; position: absolute; background: var(--home-champagne); }
-body.page-home .home-compass::before { width: 1px; height: 130%; }
-body.page-home .home-compass::after { width: 130%; height: 1px; }
-body.page-home .home-compass__north,
-body.page-home .home-compass__south,
-body.page-home .home-compass__east,
-body.page-home .home-compass__west { position: absolute; width: 0; height: 0; border-style: solid; }
-body.page-home .home-compass__north { top: 0; border-width: 0 28px 125px; border-color: transparent transparent var(--home-midnight); }
-body.page-home .home-compass__south { bottom: 0; border-width: 125px 28px 0; border-color: var(--home-stone) transparent transparent; }
-body.page-home .home-compass__east { right: 0; border-width: 28px 0 28px 125px; border-color: transparent transparent transparent var(--home-champagne); }
-body.page-home .home-compass__west { left: 0; border-width: 28px 125px 28px 0; border-color: transparent var(--home-stone) transparent transparent; }
-body.page-home .home-compass__center { z-index: 1; width: 13px; aspect-ratio: 1; border: 3px solid var(--home-porcelain); border-radius: 50%; background: var(--home-champagne); }
 body.page-home .home-visual-note { position: absolute; right: 0; bottom: 10%; color: #7B6A55; font: italic 1.05rem "Newsreader", Georgia, serif; }
 body.page-home .home-hero__bottom { display: flex; align-items: center; gap: 1rem; padding: 0 max(calc((100vw - var(--max-width)) / 2 + 2.75rem), 2rem) 1.2rem; color: #756044; font-size: .65rem; letter-spacing: .15em; }
 body.page-home .home-hero__bottom span:nth-child(2) { width: 52px; height: 1px; background: var(--home-champagne); }
@@ -138,6 +122,8 @@ body.page-home .home-section-heading > p { max-width: 46ch; margin: 0 0 .35rem; 
 body.page-home .home-season-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 body.page-home .home-season-card { position: relative; display: flex; min-height: 360px; flex-direction: column; overflow: hidden; padding: 1.4rem; border: 1px solid rgba(23,33,43,.18); border-top: 4px solid var(--season-accent); background: var(--season-surface); box-shadow: 0 8px 24px rgba(23,33,43,.045); transition: transform .2s ease, box-shadow .2s ease; }
 body.page-home .home-season-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(23,33,43,.09); }
+body.page-home .home-season-card.is-current { box-shadow: 0 12px 30px rgba(23,33,43,.13); }
+body.page-home .home-season-card.is-current::after { content: ""; position: absolute; inset: 0; border: 1px solid var(--season-accent); pointer-events: none; }
 body.page-home .home-season-card__top { display: flex; justify-content: space-between; color: var(--season-accent); font-size: .66rem; font-weight: 700; letter-spacing: .14em; }
 body.page-home .home-season-card__body { position: relative; z-index: 1; margin-top: auto; max-width: 31ch; }
 body.page-home .home-season-card__overline { margin: 0 0 .55rem; color: var(--season-accent); font-size: .72rem; font-weight: 700; letter-spacing: .08em; }
@@ -153,6 +139,8 @@ body.page-home .home-season-card--christmas { --season-accent: #29483D; --season
 body.page-home .home-orientation { padding-top: clamp(4rem, 7vw, 6rem); padding-bottom: clamp(4rem, 7vw, 6rem); background: #E2DDD3; }
 body.page-home .home-orientation__inner { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 7vw, 7rem); }
 body.page-home .home-orientation__intro p:not(.home-kicker) { max-width: 38ch; color: var(--home-graphite); line-height: 1.75; }
+body.page-home .home-current-focus { display: inline-flex; align-items: center; gap: .5rem; margin-top: .9rem; color: #756044; font-size: .78rem; font-weight: 600; letter-spacing: .04em; }
+body.page-home .home-current-focus::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: #29483D; }
 body.page-home .home-orientation__list { border-top: 1px solid var(--home-line); }
 body.page-home .home-orientation-item { display: grid; grid-template-columns: 2.5rem 1fr 1.5rem; align-items: center; gap: 1rem; padding: 1.25rem .1rem; border-bottom: 1px solid var(--home-line); color: var(--home-midnight); }
 body.page-home .home-orientation-item > span:first-child { color: #756044; font-size: .72rem; }
@@ -189,7 +177,7 @@ body.page-home .home-footer .site-footer__copy { color: var(--home-graphite); }
   body.page-home .home-hero { min-height: auto; }
   body.page-home .home-hero__inner { grid-template-columns: minmax(0, 1fr); padding-top: 4rem; padding-bottom: 2.5rem; }
   body.page-home .home-hero h1 { max-width: 9ch; font-size: clamp(3rem, 14vw, 4.8rem); }
-  body.page-home .home-hero__visual { width: min(78vw, 340px); justify-self: center; margin: 0 auto; }
+  body.page-home .home-hero__visual { width: min(76vw, 320px); justify-self: center; margin: .5rem auto 0; }
   body.page-home .home-visual-note { right: -1rem; bottom: 5%; font-size: .9rem; }
   body.page-home .home-hero__bottom { padding-inline: 1.5rem; }
   body.page-home .home-section-heading,
@@ -201,4 +189,23 @@ body.page-home .home-footer .site-footer__copy { color: var(--home-graphite); }
 }
 @media (prefers-reduced-motion: reduce) {
   body.page-home *, body.page-home *::before, body.page-home *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+body.page-home .brand__mark { display: block; width: clamp(30px, 3vw, 42px); height: auto; flex: 0 0 auto; }
+body.page-home .home-season-card.is-current .home-season-card__top [data-season-status] { font-weight: 800; }
+@media (max-width: 420px) {
+  body.page-home .home-hero__inner { padding-top: 3rem; }
+  body.page-home .home-hero h1 { font-size: clamp(2.8rem, 13vw, 3.7rem); }
+  body.page-home .home-visual-note { right: -0.25rem; bottom: 3%; font-size: .82rem; }
+  body.page-home .home-season-card { min-height: 290px; }
+}
+
+/* The seasonal emblem remains square at every viewport width. */
+body.page-home .home-season-symbol { aspect-ratio: 1 / 1; object-fit: contain; }
+body.page-home .brand__mark { aspect-ratio: 1 / 1; object-fit: contain; }
+body.page-home .home-season-card:focus-within { outline: 2px solid var(--season-accent); outline-offset: 3px; }
+@media (max-width: 760px) {
+  body.page-home .home-hero__visual { width: min(72vw, 300px); }
+  body.page-home .home-visual-note { right: 0; }
+  body.page-home .home-season-card { padding: 1.25rem; }
 }
