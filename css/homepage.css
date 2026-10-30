@@ -1,10 +1,9 @@
-
 /* SaisonKompass homepage identity — scoped to the homepage only. */
 body.page-home {
   --home-midnight: #17212B;
-  --home-porcelain: #F5F2EC;
-  --home-champagne: #B69A72;
-  --home-stone: #DCD6CC;
+  --home-porcelain: #EEEAE2;
+  --home-champagne: #A88B63;
+  --home-stone: #D8D1C6;
   --home-graphite: #343A40;
   --home-white: #FFFFFF;
   --home-line: rgba(23, 33, 43, .16);
@@ -88,7 +87,7 @@ body.page-home .home-button {
   letter-spacing: .015em;
   transition: background-color .18s ease, color .18s ease, border-color .18s ease;
 }
-body.page-home .home-button--primary { color: var(--home-white); background: var(--home-midnight); }
+body.page-home .home-button--primary { color: var(--home-white); background: #131D27; }
 body.page-home .home-button--primary:hover { background: #2A3948; }
 body.page-home .home-button--light { color: var(--home-midnight); background: var(--home-porcelain); }
 body.page-home .home-button--light:hover { color: var(--home-white); background: transparent; border-color: rgba(255,255,255,.7); }
@@ -137,20 +136,21 @@ body.page-home .home-manifesto h2,
 body.page-home .home-outlook h2 { color: var(--home-midnight); font-size: clamp(2.35rem, 4vw, 3.6rem); font-weight: 400; letter-spacing: -.025em; line-height: 1.05; }
 body.page-home .home-section-heading > p { max-width: 46ch; margin: 0 0 .35rem; color: var(--home-graphite); line-height: 1.75; }
 body.page-home .home-season-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-body.page-home .home-season-card { position: relative; display: flex; min-height: 360px; flex-direction: column; overflow: hidden; padding: 1.4rem; border: 1px solid var(--home-line); background: var(--home-white); }
-body.page-home .home-season-card__top { display: flex; justify-content: space-between; color: var(--home-graphite); font-size: .66rem; font-weight: 600; letter-spacing: .14em; }
+body.page-home .home-season-card { position: relative; display: flex; min-height: 360px; flex-direction: column; overflow: hidden; padding: 1.4rem; border: 1px solid rgba(23,33,43,.18); border-top: 4px solid var(--season-accent); background: var(--season-surface); box-shadow: 0 8px 24px rgba(23,33,43,.045); transition: transform .2s ease, box-shadow .2s ease; }
+body.page-home .home-season-card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(23,33,43,.09); }
+body.page-home .home-season-card__top { display: flex; justify-content: space-between; color: var(--season-accent); font-size: .66rem; font-weight: 700; letter-spacing: .14em; }
 body.page-home .home-season-card__body { position: relative; z-index: 1; margin-top: auto; max-width: 31ch; }
-body.page-home .home-season-card__overline { margin: 0 0 .55rem; color: #756044; font-size: .72rem; font-weight: 600; letter-spacing: .08em; }
+body.page-home .home-season-card__overline { margin: 0 0 .55rem; color: var(--season-accent); font-size: .72rem; font-weight: 700; letter-spacing: .08em; }
 body.page-home .home-season-card h3 { margin: 0 0 .75rem; color: var(--home-midnight); font: 400 clamp(2rem, 3vw, 2.8rem)/1 "Newsreader", Georgia, serif; }
 body.page-home .home-season-card p:not(.home-season-card__overline) { color: var(--home-graphite); font-size: .9rem; line-height: 1.7; }
-body.page-home .home-text-link { display: inline-flex; align-items: center; gap: .8rem; margin-top: .7rem; padding-bottom: .25rem; border-bottom: 1px solid var(--home-champagne); color: var(--home-midnight); font-size: .82rem; font-weight: 600; }
-body.page-home .home-text-link:hover { color: #756044; }
-body.page-home .home-season-card__symbol { position: absolute; top: 4rem; right: 1.3rem; color: rgba(182,154,114,.55); font: 5rem "Newsreader", Georgia, serif; }
-body.page-home .home-season-card--halloween { background: #F3F0EB; }
-body.page-home .home-season-card--christmas { background: #ECEAE5; }
-body.page-home .home-season-card--blackfriday { background: #E8E9E8; }
+body.page-home .home-text-link { display: inline-flex; align-items: center; gap: .8rem; margin-top: .7rem; padding-bottom: .25rem; border-bottom: 1px solid var(--season-accent); color: var(--home-midnight); font-size: .82rem; font-weight: 700; }
+body.page-home .home-text-link:hover { color: var(--season-accent); }
+body.page-home .home-season-card__symbol { position: absolute; top: 3.6rem; right: 1.2rem; color: var(--season-symbol); font: 5.2rem "Newsreader", Georgia, serif; }
+body.page-home .home-season-card--halloween { --season-accent: #713D32; --season-surface: #E9DCD1; --season-symbol: rgba(113,61,50,.30); }
+body.page-home .home-season-card--blackfriday { --season-accent: #343A40; --season-surface: #DDE0E2; --season-symbol: rgba(52,58,64,.24); }
+body.page-home .home-season-card--christmas { --season-accent: #29483D; --season-surface: #DCE4DC; --season-symbol: rgba(41,72,61,.28); }
 
-body.page-home .home-orientation { padding-top: clamp(4rem, 7vw, 6rem); padding-bottom: clamp(4rem, 7vw, 6rem); background: #EAE6DE; }
+body.page-home .home-orientation { padding-top: clamp(4rem, 7vw, 6rem); padding-bottom: clamp(4rem, 7vw, 6rem); background: #E2DDD3; }
 body.page-home .home-orientation__inner { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 7vw, 7rem); }
 body.page-home .home-orientation__intro p:not(.home-kicker) { max-width: 38ch; color: var(--home-graphite); line-height: 1.75; }
 body.page-home .home-orientation__list { border-top: 1px solid var(--home-line); }
@@ -166,7 +166,7 @@ body.page-home .home-manifesto h2 { max-width: 13ch; margin-bottom: 1.5rem; }
 body.page-home .home-manifesto__text { max-width: 66ch; color: var(--home-graphite); line-height: 1.85; }
 body.page-home .home-manifesto__signature { margin-top: 1.3rem; color: #756044; font: italic 1.2rem "Newsreader", Georgia, serif; }
 
-body.page-home .home-outlook { padding-top: clamp(3.5rem, 6vw, 5rem); padding-bottom: clamp(3.5rem, 6vw, 5rem); color: var(--home-porcelain); background: var(--home-midnight); }
+body.page-home .home-outlook { padding-top: clamp(3.5rem, 6vw, 5rem); padding-bottom: clamp(3.5rem, 6vw, 5rem); color: var(--home-porcelain); background: #131D27; }
 body.page-home .home-outlook__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 body.page-home .home-outlook .home-kicker { color: #D2B994; }
 body.page-home .home-outlook h2,
@@ -185,7 +185,6 @@ body.page-home .home-footer .site-footer__copy { color: var(--home-graphite); }
   body.page-home .home-season-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   body.page-home .home-season-card:last-child { grid-column: 1 / -1; width: calc(50% - .5rem); min-height: 300px; justify-self: center; }
 }
-
 @media (max-width: 760px) {
   body.page-home .home-hero { min-height: auto; }
   body.page-home .home-hero__inner { grid-template-columns: minmax(0, 1fr); padding-top: 4rem; padding-bottom: 2.5rem; }
@@ -200,10 +199,6 @@ body.page-home .home-footer .site-footer__copy { color: var(--home-graphite); }
   body.page-home .home-season-card:last-child { width: 100%; min-height: 310px; grid-column: auto; }
   body.page-home .home-outlook__inner { align-items: flex-start; flex-direction: column; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  body.page-home *, body.page-home *::before, body.page-home *::after {
-    scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
-  }
+  body.page-home *, body.page-home *::before, body.page-home *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
