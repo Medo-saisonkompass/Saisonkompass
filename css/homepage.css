@@ -1,1 +1,209 @@
 
+/* SaisonKompass homepage identity — scoped to the homepage only. */
+body.page-home {
+  --home-midnight: #17212B;
+  --home-porcelain: #F5F2EC;
+  --home-champagne: #B69A72;
+  --home-stone: #DCD6CC;
+  --home-graphite: #343A40;
+  --home-white: #FFFFFF;
+  --home-line: rgba(23, 33, 43, .16);
+  --color-bg: var(--home-porcelain);
+  --color-bg-alt: var(--home-stone);
+  --color-ink: var(--home-midnight);
+  --color-ink-soft: #59616A;
+  --color-accent: var(--home-midnight);
+  --color-accent-dark: #273746;
+  --color-violet: var(--home-graphite);
+  --color-line: var(--home-line);
+  --color-card-bg: var(--home-white);
+  --color-on-dark: var(--home-porcelain);
+  color: var(--home-midnight);
+  background: var(--home-porcelain);
+}
+
+body.page-home .site-header { background: var(--home-porcelain); border-color: var(--home-line); }
+body.page-home .brand { color: var(--home-midnight); }
+body.page-home .brand__mark { color: var(--home-midnight); }
+body.page-home .site-nav a { color: var(--home-graphite); }
+body.page-home .site-nav a:hover,
+body.page-home .site-nav a[aria-current="page"] { color: var(--home-midnight); }
+body.page-home :focus-visible { outline-color: var(--home-champagne); }
+body.page-home .skip-link { background: var(--home-midnight); color: var(--home-white); }
+
+body.page-home .home-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: min(690px, 78vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--home-porcelain);
+  border-bottom: 1px solid var(--home-line);
+}
+body.page-home .home-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 7rem);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+body.page-home .home-hero__copy { max-width: 650px; position: relative; z-index: 1; }
+body.page-home .home-kicker {
+  margin: 0 0 1.15rem;
+  color: #756044;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+body.page-home .home-hero h1 {
+  max-width: 10ch;
+  margin: 0 0 1.5rem;
+  color: var(--home-midnight);
+  font-size: clamp(3.3rem, 7vw, 6.4rem);
+  font-weight: 400;
+  letter-spacing: -.045em;
+  line-height: .98;
+}
+body.page-home .home-hero__lead {
+  max-width: 48ch;
+  margin-bottom: 2rem;
+  color: var(--home-graphite);
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 1.75;
+}
+body.page-home .home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 52px;
+  padding: .9rem 1.35rem;
+  border: 1px solid transparent;
+  font-size: .86rem;
+  font-weight: 600;
+  letter-spacing: .015em;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+}
+body.page-home .home-button--primary { color: var(--home-white); background: var(--home-midnight); }
+body.page-home .home-button--primary:hover { background: #2A3948; }
+body.page-home .home-button--light { color: var(--home-midnight); background: var(--home-porcelain); }
+body.page-home .home-button--light:hover { color: var(--home-white); background: transparent; border-color: rgba(255,255,255,.7); }
+body.page-home .home-hero__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 490px);
+  aspect-ratio: 1;
+  justify-self: end;
+  color: var(--home-midnight);
+}
+body.page-home .home-orbit { position: absolute; border: 1px solid rgba(182,154,114,.65); border-radius: 50%; }
+body.page-home .home-orbit--outer { inset: 3%; }
+body.page-home .home-orbit--inner { inset: 17%; border-color: rgba(23,33,43,.2); }
+body.page-home .home-compass {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 54%;
+  aspect-ratio: 1;
+  transform: rotate(12deg);
+}
+body.page-home .home-compass::before,
+body.page-home .home-compass::after { content: ""; position: absolute; background: var(--home-champagne); }
+body.page-home .home-compass::before { width: 1px; height: 130%; }
+body.page-home .home-compass::after { width: 130%; height: 1px; }
+body.page-home .home-compass__north,
+body.page-home .home-compass__south,
+body.page-home .home-compass__east,
+body.page-home .home-compass__west { position: absolute; width: 0; height: 0; border-style: solid; }
+body.page-home .home-compass__north { top: 0; border-width: 0 28px 125px; border-color: transparent transparent var(--home-midnight); }
+body.page-home .home-compass__south { bottom: 0; border-width: 125px 28px 0; border-color: var(--home-stone) transparent transparent; }
+body.page-home .home-compass__east { right: 0; border-width: 28px 0 28px 125px; border-color: transparent transparent transparent var(--home-champagne); }
+body.page-home .home-compass__west { left: 0; border-width: 28px 125px 28px 0; border-color: transparent var(--home-stone) transparent transparent; }
+body.page-home .home-compass__center { z-index: 1; width: 13px; aspect-ratio: 1; border: 3px solid var(--home-porcelain); border-radius: 50%; background: var(--home-champagne); }
+body.page-home .home-visual-note { position: absolute; right: 0; bottom: 10%; color: #7B6A55; font: italic 1.05rem "Newsreader", Georgia, serif; }
+body.page-home .home-hero__bottom { display: flex; align-items: center; gap: 1rem; padding: 0 max(calc((100vw - var(--max-width)) / 2 + 2.75rem), 2rem) 1.2rem; color: #756044; font-size: .65rem; letter-spacing: .15em; }
+body.page-home .home-hero__bottom span:nth-child(2) { width: 52px; height: 1px; background: var(--home-champagne); }
+
+body.page-home .home-seasons { padding-top: clamp(4rem, 8vw, 7rem); padding-bottom: clamp(4rem, 8vw, 7rem); }
+body.page-home .home-section-heading { display: grid; grid-template-columns: 1fr minmax(250px, .7fr); align-items: end; gap: 3rem; margin-bottom: 2.6rem; }
+body.page-home .home-section-heading h2,
+body.page-home .home-orientation h2,
+body.page-home .home-manifesto h2,
+body.page-home .home-outlook h2 { color: var(--home-midnight); font-size: clamp(2.35rem, 4vw, 3.6rem); font-weight: 400; letter-spacing: -.025em; line-height: 1.05; }
+body.page-home .home-section-heading > p { max-width: 46ch; margin: 0 0 .35rem; color: var(--home-graphite); line-height: 1.75; }
+body.page-home .home-season-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+body.page-home .home-season-card { position: relative; display: flex; min-height: 360px; flex-direction: column; overflow: hidden; padding: 1.4rem; border: 1px solid var(--home-line); background: var(--home-white); }
+body.page-home .home-season-card__top { display: flex; justify-content: space-between; color: var(--home-graphite); font-size: .66rem; font-weight: 600; letter-spacing: .14em; }
+body.page-home .home-season-card__body { position: relative; z-index: 1; margin-top: auto; max-width: 31ch; }
+body.page-home .home-season-card__overline { margin: 0 0 .55rem; color: #756044; font-size: .72rem; font-weight: 600; letter-spacing: .08em; }
+body.page-home .home-season-card h3 { margin: 0 0 .75rem; color: var(--home-midnight); font: 400 clamp(2rem, 3vw, 2.8rem)/1 "Newsreader", Georgia, serif; }
+body.page-home .home-season-card p:not(.home-season-card__overline) { color: var(--home-graphite); font-size: .9rem; line-height: 1.7; }
+body.page-home .home-text-link { display: inline-flex; align-items: center; gap: .8rem; margin-top: .7rem; padding-bottom: .25rem; border-bottom: 1px solid var(--home-champagne); color: var(--home-midnight); font-size: .82rem; font-weight: 600; }
+body.page-home .home-text-link:hover { color: #756044; }
+body.page-home .home-season-card__symbol { position: absolute; top: 4rem; right: 1.3rem; color: rgba(182,154,114,.55); font: 5rem "Newsreader", Georgia, serif; }
+body.page-home .home-season-card--halloween { background: #F3F0EB; }
+body.page-home .home-season-card--christmas { background: #ECEAE5; }
+body.page-home .home-season-card--blackfriday { background: #E8E9E8; }
+
+body.page-home .home-orientation { padding-top: clamp(4rem, 7vw, 6rem); padding-bottom: clamp(4rem, 7vw, 6rem); background: #EAE6DE; }
+body.page-home .home-orientation__inner { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 7vw, 7rem); }
+body.page-home .home-orientation__intro p:not(.home-kicker) { max-width: 38ch; color: var(--home-graphite); line-height: 1.75; }
+body.page-home .home-orientation__list { border-top: 1px solid var(--home-line); }
+body.page-home .home-orientation-item { display: grid; grid-template-columns: 2.5rem 1fr 1.5rem; align-items: center; gap: 1rem; padding: 1.25rem .1rem; border-bottom: 1px solid var(--home-line); color: var(--home-midnight); }
+body.page-home .home-orientation-item > span:first-child { color: #756044; font-size: .72rem; }
+body.page-home .home-orientation-item strong { font: 400 clamp(1.25rem, 2vw, 1.65rem) "Newsreader", Georgia, serif; }
+body.page-home .home-orientation-item > span:last-child { justify-self: end; transition: transform .18s ease; }
+body.page-home .home-orientation-item:hover > span:last-child { transform: translate(3px,-3px); }
+
+body.page-home .home-manifesto { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); text-align: center; }
+body.page-home .home-manifesto__inner { display: flex; flex-direction: column; align-items: center; }
+body.page-home .home-manifesto h2 { max-width: 13ch; margin-bottom: 1.5rem; }
+body.page-home .home-manifesto__text { max-width: 66ch; color: var(--home-graphite); line-height: 1.85; }
+body.page-home .home-manifesto__signature { margin-top: 1.3rem; color: #756044; font: italic 1.2rem "Newsreader", Georgia, serif; }
+
+body.page-home .home-outlook { padding-top: clamp(3.5rem, 6vw, 5rem); padding-bottom: clamp(3.5rem, 6vw, 5rem); color: var(--home-porcelain); background: var(--home-midnight); }
+body.page-home .home-outlook__inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+body.page-home .home-outlook .home-kicker { color: #D2B994; }
+body.page-home .home-outlook h2,
+body.page-home .home-outlook p:not(.home-kicker) { color: var(--home-porcelain); }
+body.page-home .home-outlook h2 { max-width: 15ch; }
+body.page-home .home-outlook p:not(.home-kicker) { max-width: 54ch; margin-bottom: 0; line-height: 1.75; }
+body.page-home .home-outlook .home-button { flex: 0 0 auto; }
+body.page-home .home-footer { background: var(--home-porcelain); }
+body.page-home .home-footer .brand { color: var(--home-midnight); }
+body.page-home .home-footer .site-footer__tagline,
+body.page-home .home-footer .footer-nav a,
+body.page-home .home-footer .site-footer__copy { color: var(--home-graphite); }
+
+@media (max-width: 900px) {
+  body.page-home .home-hero__inner { grid-template-columns: minmax(0, 1fr) minmax(230px, .8fr); gap: 2rem; }
+  body.page-home .home-season-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.page-home .home-season-card:last-child { grid-column: 1 / -1; width: calc(50% - .5rem); min-height: 300px; justify-self: center; }
+}
+
+@media (max-width: 760px) {
+  body.page-home .home-hero { min-height: auto; }
+  body.page-home .home-hero__inner { grid-template-columns: minmax(0, 1fr); padding-top: 4rem; padding-bottom: 2.5rem; }
+  body.page-home .home-hero h1 { max-width: 9ch; font-size: clamp(3rem, 14vw, 4.8rem); }
+  body.page-home .home-hero__visual { width: min(78vw, 340px); justify-self: center; margin: 0 auto; }
+  body.page-home .home-visual-note { right: -1rem; bottom: 5%; font-size: .9rem; }
+  body.page-home .home-hero__bottom { padding-inline: 1.5rem; }
+  body.page-home .home-section-heading,
+  body.page-home .home-orientation__inner { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  body.page-home .home-season-grid { grid-template-columns: minmax(0, 1fr); }
+  body.page-home .home-season-card,
+  body.page-home .home-season-card:last-child { width: 100%; min-height: 310px; grid-column: auto; }
+  body.page-home .home-outlook__inner { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-home *, body.page-home *::before, body.page-home *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
