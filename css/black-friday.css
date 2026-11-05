@@ -88,6 +88,7 @@
 .bf-end__inner { padding-top:clamp(3rem,6vw,5rem); padding-bottom:clamp(3rem,6vw,5rem); }
 .bf-end h2 { max-width:18ch; color:var(--color-on-dark); }
 .bf-end p:not(.eyebrow) { color:rgba(245,242,236,.82); }
+
 @media (max-width:760px) {
   .bf-hero__grid,.bf-intro__grid,.bf-split,.bf-last-check { grid-template-columns:1fr; }
   .bf-hero__grid { gap:2rem; padding-top:3rem; padding-bottom:3rem; }
@@ -162,6 +163,7 @@
 .bf-checklist input[type="checkbox"]:checked + span { color: var(--color-ink); text-decoration: line-through; text-decoration-color: var(--color-accent); }
 .bf-print-actions button { cursor: pointer; }
 .bf-print-actions button:focus-visible { outline: 3px solid var(--color-violet); outline-offset: 3px; }
+
 @media (max-width:760px) {
   .bf-hero__art img { min-height: 0; height: auto; max-height: none; aspect-ratio: 4 / 3; }
   .bf-buy-table { min-width: 0; table-layout: auto; }
@@ -190,17 +192,38 @@
   .bf-buy-table tbody tr:last-child td { border-bottom: 1px solid var(--color-line); }
   .bf-buy-table td input { font-size: 1rem; }
 }
-@media print {
-  @page { size: A4 landscape; margin: 8mm; }
 
-  html, body {
+/* =========================================
+   BLACK FRIDAY — PRINT LAYOUT
+   A4 landscape, Kaufplan only
+========================================= */
+
+@page {
+  size: A4 landscape;
+  margin: 7mm;
+}
+
+@media print {
+
+  html,
+  body {
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
     background: #fff !important;
     color: #000 !important;
-    font-size: 9pt !important;
+    font-size: 8pt !important;
   }
 
-  body * { visibility: hidden !important; }
-  #kaufplan, #kaufplan * { visibility: visible !important; }
+  body * {
+    visibility: hidden !important;
+  }
+
+  #kaufplan,
+  #kaufplan * {
+    visibility: visible !important;
+  }
 
   #kaufplan {
     display: block !important;
@@ -212,6 +235,8 @@
     padding: 0 !important;
     background: #fff !important;
     color: #000 !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   #kaufplan .wrap {
@@ -221,24 +246,145 @@
     padding: 0 !important;
   }
 
-  #kaufplan .section-heading { margin: 0 0 4mm !important; }
-  #kaufplan .section-heading .eyebrow { margin-bottom: 1mm !important; }
-  #kaufplan .section-heading h2 { margin: 0 0 2mm !important; font-size: 18pt !important; }
-  #kaufplan .section-heading p { margin: 0 !important; font-size: 8pt !important; }
-  #kaufplan .bf-plan-intro { padding: 3mm !important; margin: 3mm 0 !important; gap: 5mm !important; background: #F2EFE8 !important; }
-  #kaufplan .bf-plan-intro p { font-size: 8pt !important; }
-  #kaufplan .bf-plan-intro span { font-size: 7pt !important; }
-  #kaufplan .bf-table-wrap { overflow: visible !important; border: 1px solid #aaa !important; }
-  #kaufplan .bf-buy-table { display: table !important; width: 100% !important; min-width: 0 !important; table-layout: fixed !important; font-size: 8pt !important; }
-  #kaufplan .bf-buy-table thead { position: static !important; width: auto !important; height: auto !important; clip: auto !important; overflow: visible !important; white-space: normal !important; }
-  #kaufplan .bf-buy-table tbody { display: table-row-group !important; }
-  #kaufplan .bf-buy-table tr { display: table-row !important; margin: 0 !important; border: 0 !important; }
+  #kaufplan .section-heading {
+    margin: 0 0 3mm !important;
+  }
+
+  #kaufplan .section-heading .eyebrow {
+    margin: 0 0 1mm !important;
+    font-size: 7pt !important;
+  }
+
+  #kaufplan .section-heading h2 {
+    margin: 0 0 2mm !important;
+    font-size: 16pt !important;
+  }
+
+  #kaufplan .section-heading p {
+    margin: 0 !important;
+    font-size: 7.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  #kaufplan .bf-plan-intro {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap: 4mm !important;
+    margin: 2mm 0 3mm !important;
+    padding: 2.5mm !important;
+    background: #F2EFE8 !important;
+    border-left: 2px solid #B28B4E !important;
+  }
+
+  #kaufplan .bf-plan-intro p {
+    margin: 0 !important;
+    font-size: 7.5pt !important;
+    line-height: 1.35 !important;
+  }
+
+  #kaufplan .bf-plan-intro span {
+    font-size: 6.5pt !important;
+  }
+
+  #kaufplan .bf-table-wrap {
+    width: 100% !important;
+    overflow: visible !important;
+    border: 1px solid #999 !important;
+  }
+
+  #kaufplan .bf-buy-table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    font-size: 7pt !important;
+  }
+
+  #kaufplan .bf-buy-table thead {
+    display: table-header-group !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    clip: auto !important;
+    overflow: visible !important;
+  }
+
+  #kaufplan .bf-buy-table tbody {
+    display: table-row-group !important;
+  }
+
+  #kaufplan .bf-buy-table tr {
+    display: table-row !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
   #kaufplan .bf-buy-table th,
-  #kaufplan .bf-buy-table td { display: table-cell !important; padding: 2mm !important; height: 14mm !important; border: 1px solid #bbb !important; background: #fff !important; }
-  #kaufplan .bf-buy-table th { background: #DED8CD !important; }
-  #kaufplan .bf-buy-table td::before { content: none !important; display: none !important; }
-  #kaufplan .bf-buy-table td input { min-height: 7mm !important; padding: 1mm !important; border: 0 !important; border-bottom: 1px solid #aaa !important; background: transparent !important; color: #000 !important; font-size: 8pt !important; }
-  #kaufplan .bf-euro { font-size: 7pt !important; }
-  #kaufplan .bf-table-note { margin-top: 2mm !important; font-size: 7.5pt !important; }
-  #kaufplan .bf-print-actions { display: none !important; }
+  #kaufplan .bf-buy-table td {
+    display: table-cell !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: 2mm !important;
+    border: 1px solid #bbb !important;
+    vertical-align: top !important;
+    background: #fff !important;
+    white-space: normal !important;
+  }
+
+  #kaufplan .bf-buy-table th {
+    background: #DED8CD !important;
+    font-size: 7pt !important;
+    line-height: 1.25 !important;
+  }
+
+  #kaufplan .bf-buy-table th:nth-child(1) { width: 19% !important; }
+  #kaufplan .bf-buy-table th:nth-child(2) { width: 12% !important; }
+  #kaufplan .bf-buy-table th:nth-child(3) { width: 13% !important; }
+  #kaufplan .bf-buy-table th:nth-child(4) { width: 15% !important; }
+  #kaufplan .bf-buy-table th:nth-child(5) { width: 14% !important; }
+  #kaufplan .bf-buy-table th:nth-child(6) { width: 27% !important; }
+
+  #kaufplan .bf-buy-table td::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  #kaufplan .bf-buy-table input.bf-print-hidden {
+    display: none !important;
+  }
+
+  #kaufplan .bf-print-value {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: #000 !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 7pt !important;
+    line-height: 1.3 !important;
+    white-space: pre-wrap !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  #kaufplan .bf-euro {
+    display: block !important;
+    margin-top: 1mm !important;
+    font-size: 6.5pt !important;
+  }
+
+  #kaufplan .bf-table-note {
+    margin: 2mm 0 0 !important;
+    font-size: 6.5pt !important;
+    line-height: 1.3 !important;
+  }
+
+  #kaufplan .bf-print-actions {
+    display: none !important;
+  }
 }
