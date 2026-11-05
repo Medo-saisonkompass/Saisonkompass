@@ -27,6 +27,7 @@ const REQUIRED = [
   "impressum",
   "datenschutz",
   "css",
+  "fonts",
   "js",
 ];
 
